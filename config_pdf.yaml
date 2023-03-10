@@ -1,6 +1,6 @@
 # docs https://pandoc.org/MANUAL.html#default-files
 input-files: 
-output-file: output/manuscript.pdf
+output-file: output/manuscript.pdf # for entire dissertation
 resource-path: ["manuscript"] # needed for images linked in .md
 from: markdown
 file-scope: false # Parse each file individually before combining for multifile documents. This will allow footnotes in different files with the same identifiers to work as expected. If this option is set, footnotes and links will not work across files.
@@ -16,6 +16,7 @@ citeproc: true
 metadata:
   bibliography: /Users/valerii/Zotero/zotero.bib
   csl: /Users/valerii/Zotero/styles/apa.csl
+
 metadata-file: manuscript/00_metadata.md
 
 # log 
