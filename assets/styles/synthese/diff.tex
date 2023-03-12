@@ -1,0 +1,1561 @@
+%DIF 1-46c1-68
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL default.latex    Sun Mar 12 07:57:18 2023
+%DIF ADD sn-article.tex   Mon Jul 19 12:11:18 2021
+%DIF < % Options for packages loaded elsewhere
+%DIF < \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
+%DIF < \PassOptionsToPackage{hyphens}{url}
+%DIF < $if(colorlinks)$
+%DIF < \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%DIF < $endif$
+%DIF < $if(CJKmainfont)$
+%DIF < \PassOptionsToPackage{space}{xeCJK}
+%DIF < $endif$
+%DIF < %
+%DIF < \documentclass[
+%DIF < $if(fontsize)$
+%DIF <   $fontsize$,
+%DIF < $endif$
+%DIF < $if(papersize)$
+%DIF <   $papersize$paper,
+%DIF < $endif$
+%DIF < $if(beamer)$
+%DIF <   ignorenonframetext,
+%DIF < $if(handout)$
+%DIF <   handout,
+%DIF < $endif$
+%DIF < $if(aspectratio)$
+%DIF <   aspectratio=$aspectratio$,
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $for(classoption)$
+%DIF <   $classoption$$sep$,
+%DIF < $endfor$
+%DIF < ]{$documentclass$}
+%DIF < $if(beamer)$
+%DIF < $if(background-image)$
+%DIF < \usebackgroundtemplate{%
+%DIF <   \includegraphics[width=\paperwidth]{$background-image$}%
+%DIF < }
+%DIF < $endif$
+%DIF < \usepackage{pgfpages}
+%DIF < \setbeamertemplate{caption}[numbered]
+%DIF < \setbeamertemplate{caption label separator}{: }
+%DIF < \setbeamercolor{caption name}{fg=normal text.fg}
+%DIF < \beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
+%DIF < $for(beameroption)$
+%DIF < \setbeameroption{$beameroption$}
+%DIF < $endfor$
+%DIF < % Prevent slide breaks in the middle of a paragraph
+%DIF < \widowpenalties 1 10000
+%DIF -------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %DIF > 
+%%                                                                 %% %DIF > 
+%% Please do not use \input{...} to include other tex files.       %% %DIF > 
+%% Submit your LaTeX manuscript as one .tex document.              %% %DIF > 
+%%                                                                 %% %DIF > 
+%% All additional figures and files should be attached             %% %DIF > 
+%% separately and not embedded in the \TeX\ document itself.       %% %DIF > 
+%%                                                                 %% %DIF > 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %DIF > 
+ %DIF > 
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing %DIF > 
+ %DIF > 
+%%=======================================================%% %DIF > 
+%% to print line numbers in the margin use lineno option %% %DIF > 
+%%=======================================================%% %DIF > 
+ %DIF > 
+%%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style %DIF > 
+ %DIF > 
+%%======================================================%% %DIF > 
+%% to compile with pdflatex/xelatex use pdflatex option %% %DIF > 
+%%======================================================%% %DIF > 
+ %DIF > 
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style %DIF > 
+ %DIF > 
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style %DIF > 
+\documentclass[sn-mathphys]{sn-jnl}% Math and Physical Sciences Reference Style %DIF > 
+%%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style %DIF > 
+%%\documentclass[sn-vancouver]{sn-jnl}% Vancouver Reference Style %DIF > 
+%%\documentclass[sn-apa]{sn-jnl}% APA Reference Style %DIF > 
+%%\documentclass[sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style %DIF > 
+%%\documentclass[sn-standardnature]{sn-jnl}% Standard Nature Portfolio Reference Style %DIF > 
+%%\documentclass[default]{sn-jnl}% Default %DIF > 
+%%\documentclass[default,iicol]{sn-jnl}% Default with double column layout %DIF > 
+ %DIF > 
+%%%% Standard Packages %DIF > 
+%%<additional latex packages if required can be included here> %DIF > 
+%%%% %DIF > 
+ %DIF > 
+%%%%%=============================================================================%%%% %DIF > 
+%%%%  Remarks: This template is provided to aid authors with the preparation %DIF > 
+%%%%  of original research articles intended for submission to journals published  %DIF > 
+%%%%  by Springer Nature. The guidance has been prepared in partnership with  %DIF > 
+%%%%  production teams to conform to Springer Nature technical requirements.  %DIF > 
+%%%%  Editorial and presentation requirements differ among journal portfolios and  %DIF > 
+%%%%  research disciplines. You may find sections in this template are irrelevant  %DIF > 
+%%%%  to your work and are empowered to omit any such section if allowed by the  %DIF > 
+%%%%  journal you intend to submit to. The submission guidelines and policies  %DIF > 
+%%%%  of the journal take precedence. A detailed User Manual is available in the  %DIF > 
+%%%%  template package for technical guidance. %DIF > 
+%%%%%=============================================================================%%%% %DIF > 
+ %DIF > 
+\jyear{2021}% %DIF > 
+ %DIF > 
+%% as per the requirement new theorem styles can be included as shown below %DIF > 
+\theoremstyle{thmstyleone}% %DIF > 
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers %DIF > 
+%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers %DIF > 
+%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition %DIF > 
+\newtheorem{proposition}[theorem]{Proposition}%  %DIF > 
+%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc. %DIF > 
+ %DIF > 
+\theoremstyle{thmstyletwo}% %DIF > 
+\newtheorem{example}{Example}% %DIF > 
+\newtheorem{remark}{Remark}% %DIF > 
+ %DIF > 
+\theoremstyle{thmstylethree}% %DIF > 
+\newtheorem{definition}{Definition}% %DIF > 
+ %DIF > 
+%DIF -------
+\raggedbottom
+%DIF 48-432c70
+%DIF < $if(section-titles)$
+%DIF < \setbeamertemplate{part page}{
+%DIF <   \centering
+%DIF <   \begin{beamercolorbox}[sep=16pt,center]{part title}
+%DIF <     \usebeamerfont{part title}\insertpart\par
+%DIF <   \end{beamercolorbox}
+%DIF < }
+%DIF < \setbeamertemplate{section page}{
+%DIF <   \centering
+%DIF <   \begin{beamercolorbox}[sep=12pt,center]{part title}
+%DIF <     \usebeamerfont{section title}\insertsection\par
+%DIF <   \end{beamercolorbox}
+%DIF < }
+%DIF < \setbeamertemplate{subsection page}{
+%DIF <   \centering
+%DIF <   \begin{beamercolorbox}[sep=8pt,center]{part title}
+%DIF <     \usebeamerfont{subsection title}\insertsubsection\par
+%DIF <   \end{beamercolorbox}
+%DIF < }
+%DIF < \AtBeginPart{
+%DIF <   \frame{\partpage}
+%DIF < }
+%DIF < \AtBeginSection{
+%DIF <   \ifbibliography
+%DIF <   \else
+%DIF <     \frame{\sectionpage}
+%DIF <   \fi
+%DIF < }
+%DIF < \AtBeginSubsection{
+%DIF <   \frame{\subsectionpage}
+%DIF < }
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $if(beamerarticle)$
+%DIF < \usepackage{beamerarticle} % needs to be loaded first
+%DIF < $endif$
+%DIF < \usepackage{amsmath,amssymb}
+%DIF < $if(linestretch)$
+%DIF < \usepackage{setspace}
+%DIF < $endif$
+%DIF < \usepackage{iftex}
+%DIF < \ifPDFTeX
+%DIF <   \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+%DIF <   \usepackage[utf8]{inputenc}
+%DIF <   \usepackage{textcomp} % provide euro and other symbols
+%DIF < \else % if luatex or xetex
+%DIF < $if(mathspec)$
+%DIF <   \ifXeTeX
+%DIF <     \usepackage{mathspec} % this also loads fontspec
+%DIF <   \else
+%DIF <     \usepackage{unicode-math} % this also loads fontspec
+%DIF <   \fi
+%DIF < $else$
+%DIF <   \usepackage{unicode-math} % this also loads fontspec
+%DIF < $endif$
+%DIF <   \defaultfontfeatures{Scale=MatchLowercase}$-- must come before Beamer theme
+%DIF <   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+%DIF < \fi
+%DIF < $if(fontfamily)$
+%DIF < $else$
+%DIF < $-- Set default font before Beamer theme so the theme can override it
+%DIF < \usepackage{lmodern}
+%DIF < $endif$
+%DIF < $-- Set Beamer theme before user font settings so they can override theme
+%DIF < $if(beamer)$
+%DIF < $if(theme)$
+%DIF < \usetheme[$for(themeoptions)$$themeoptions$$sep$,$endfor$]{$theme$}
+%DIF < $endif$
+%DIF < $if(colortheme)$
+%DIF < \usecolortheme{$colortheme$}
+%DIF < $endif$
+%DIF < $if(fonttheme)$
+%DIF < \usefonttheme{$fonttheme$}
+%DIF < $endif$
+%DIF < $if(mainfont)$
+%DIF < \usefonttheme{serif} % use mainfont rather than sansfont for slide text
+%DIF < $endif$
+%DIF < $if(innertheme)$
+%DIF < \useinnertheme{$innertheme$}
+%DIF < $endif$
+%DIF < $if(outertheme)$
+%DIF < \useoutertheme{$outertheme$}
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $-- User font settings (must come after default font and Beamer theme)
+%DIF < $if(fontfamily)$
+%DIF < \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+%DIF < $endif$
+%DIF < \ifPDFTeX\else
+%DIF <   % xetex/luatex font selection
+%DIF < $if(mainfont)$
+%DIF <   \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+%DIF < $endif$
+%DIF < $if(sansfont)$
+%DIF <   \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+%DIF < $endif$
+%DIF < $if(monofont)$
+%DIF <   \setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
+%DIF < $endif$
+%DIF < $for(fontfamilies)$
+%DIF <   \newfontfamily{$fontfamilies.name$}[$for(fontfamilies.options)$$fontfamilies.options$$sep$,$endfor$]{$fontfamilies.font$}
+%DIF < $endfor$
+%DIF < $if(mathfont)$
+%DIF < $if(mathspec)$
+%DIF <   \ifXeTeX
+%DIF <     \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+%DIF <   \else
+%DIF <     \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+%DIF <   \fi
+%DIF < $else$
+%DIF <   \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $if(CJKmainfont)$
+%DIF <   \ifXeTeX
+%DIF <     \usepackage{xeCJK}
+%DIF <     \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+%DIF <   \fi
+%DIF < $endif$
+%DIF < $if(luatexjapresetoptions)$
+%DIF <   \ifLuaTeX
+%DIF <     \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
+%DIF <   \fi
+%DIF < $endif$
+%DIF < $if(CJKmainfont)$
+%DIF <   \ifLuaTeX
+%DIF <     \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
+%DIF <     \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+%DIF <   \fi
+%DIF < $endif$
+%DIF < \fi
+%DIF < $if(zero-width-non-joiner)$
+%DIF < %% Support for zero-width non-joiner characters.
+%DIF < \makeatletter
+%DIF < \def\zerowidthnonjoiner{%
+%DIF <   % Prevent ligatures and adjust kerning, but still support hyphenating.
+%DIF <   \texorpdfstring{%
+%DIF <     \TextOrMath{\nobreak\discretionary{-}{}{\kern.03em}%
+%DIF <       \ifvmode\else\nobreak\hskip\z@skip\fi}{}%
+%DIF <   }{}%
+%DIF < }
+%DIF < \makeatother
+%DIF < \ifPDFTeX
+%DIF <   \DeclareUnicodeCharacter{200C}{\zerowidthnonjoiner}
+%DIF < \else
+%DIF <   \catcode`^^^^200c=\active
+%DIF <   \protected\def ^^^^200c{\zerowidthnonjoiner}
+%DIF < \fi
+%DIF < %% End of ZWNJ support
+%DIF < $endif$
+%DIF < % Use upquote if available, for straight quotes in verbatim environments
+%DIF < \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+%DIF < \IfFileExists{microtype.sty}{% use microtype if available
+%DIF <   \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
+%DIF <   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+%DIF < }{}
+%DIF < $if(indent)$
+%DIF < $else$
+%DIF < \makeatletter
+%DIF < \@ifundefined{KOMAClassName}{% if non-KOMA class
+%DIF <   \IfFileExists{parskip.sty}{%
+%DIF <     \usepackage{parskip}
+%DIF <   }{% else
+%DIF <     \setlength{\parindent}{0pt}
+%DIF <     \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+%DIF < }{% if KOMA class
+%DIF <   \KOMAoptions{parskip=half}}
+%DIF < \makeatother
+%DIF < $endif$
+%DIF < $if(verbatim-in-note)$
+%DIF < \usepackage{fancyvrb}
+%DIF < $endif$
+%DIF < \usepackage{xcolor}
+%DIF < $if(geometry)$
+%DIF < $if(beamer)$
+%DIF < \geometry{$for(geometry)$$geometry$$sep$,$endfor$}
+%DIF < $else$
+%DIF < \usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $if(beamer)$
+%DIF < \newif\ifbibliography
+%DIF < $endif$
+%DIF < $if(listings)$
+%DIF < \usepackage{listings}
+%DIF < \newcommand{\passthrough}[1]{#1}
+%DIF < \lstset{defaultdialect=[5.3]Lua}
+%DIF < \lstset{defaultdialect=[x86masm]Assembler}
+%DIF < $endif$
+%DIF < $if(lhs)$
+%DIF < \lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
+%DIF < $endif$
+%DIF < $if(highlighting-macros)$
+%DIF < $highlighting-macros$
+%DIF < $endif$
+%DIF < $if(tables)$
+%DIF < \usepackage{longtable,booktabs,array}
+%DIF < $if(multirow)$
+%DIF < \usepackage{multirow}
+%DIF < $endif$
+%DIF < \usepackage{calc} % for calculating minipage widths
+%DIF < $if(beamer)$
+%DIF < \usepackage{caption}
+%DIF < % Make caption package work with longtable
+%DIF < \makeatletter
+%DIF < \def\fnum@table{\tablename~\thetable}
+%DIF < \makeatother
+%DIF < $else$
+%DIF < % Correct order of tables after \paragraph or \subparagraph
+%DIF < \usepackage{etoolbox}
+%DIF < \makeatletter
+%DIF < \patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+%DIF < \makeatother
+%DIF < % Allow footnotes in longtable head/foot
+%DIF < \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+%DIF < \makesavenoteenv{longtable}
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $if(graphics)$
+%DIF < \usepackage{graphicx}
+%DIF < \makeatletter
+%DIF < \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+%DIF < \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+%DIF < \makeatother
+%DIF < % Scale images if necessary, so that they will not overflow the page
+%DIF < % margins by default, and it is still possible to overwrite the defaults
+%DIF < % using explicit options in \includegraphics[width, height, ...]{}
+%DIF < \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+%DIF < % Set default figure placement to htbp
+%DIF < \makeatletter
+%DIF < \def\fps@figure{htbp}
+%DIF < \makeatother
+%DIF < $endif$
+%DIF < $if(svg)$
+%DIF < \usepackage{svg}
+%DIF < $endif$
+%DIF < $if(strikeout)$
+%DIF < $-- also used for underline
+%DIF < \usepackage{soul}
+%DIF < $endif$
+%DIF < \setlength{\emergencystretch}{3em} % prevent overfull lines
+%DIF < \providecommand{\tightlist}{%
+%DIF <   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%DIF < $if(numbersections)$
+%DIF < \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+%DIF < $else$
+%DIF < \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+%DIF < $endif$
+%DIF < $if(subfigure)$
+%DIF < \usepackage{subcaption}
+%DIF < $endif$
+%DIF < $if(beamer)$
+%DIF < $else$
+%DIF < $if(block-headings)$
+%DIF < % Make \paragraph and \subparagraph free-standing
+%DIF < \ifx\paragraph\undefined\else
+%DIF <   \let\oldparagraph\paragraph
+%DIF <   \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+%DIF < \fi
+%DIF < \ifx\subparagraph\undefined\else
+%DIF <   \let\oldsubparagraph\subparagraph
+%DIF <   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+%DIF < \fi
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $if(pagestyle)$
+%DIF < \pagestyle{$pagestyle$}
+%DIF < $endif$
+%DIF < $if(csl-refs)$
+%DIF < \newlength{\cslhangindent}
+%DIF < \setlength{\cslhangindent}{1.5em}
+%DIF < \newlength{\csllabelwidth}
+%DIF < \setlength{\csllabelwidth}{3em}
+%DIF < \newlength{\cslentryspacingunit} % times entry-spacing
+%DIF < \setlength{\cslentryspacingunit}{\parskip}
+%DIF < \newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+%DIF <  {% don't indent paragraphs
+%DIF <   \setlength{\parindent}{0pt}
+%DIF <   % turn on hanging indent if param 1 is 1
+%DIF <   \ifodd #1
+%DIF <   \let\oldpar\par
+%DIF <   \def\par{\hangindent=\cslhangindent\oldpar}
+%DIF <   \fi
+%DIF <   % set entry spacing
+%DIF <   \setlength{\parskip}{#2\cslentryspacingunit}
+%DIF <  }%
+%DIF <  {}
+%DIF < \usepackage{calc}
+%DIF < \newcommand{\CSLBlock}[1]{#1\hfill\break}
+%DIF < \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+%DIF < \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+%DIF < \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+%DIF < $endif$
+%DIF < $if(lang)$
+%DIF < \ifLuaTeX
+%DIF < \usepackage[bidi=basic]{babel}
+%DIF < \else
+%DIF < \usepackage[bidi=default]{babel}
+%DIF < \fi
+%DIF < $if(babel-lang)$
+%DIF < \babelprovide[main,import]{$babel-lang$}
+%DIF < $if(mainfont)$
+%DIF < \ifPDFTeX
+%DIF < \else
+%DIF < \babelfont[$babel-lang$]{rm}{$mainfont$}
+%DIF < \fi
+%DIF < $endif$
+%DIF < $endif$
+%DIF < $for(babel-otherlangs)$
+%DIF < \babelprovide[import]{$babel-otherlangs$}
+%DIF < $endfor$
+%DIF < % get rid of language-specific shorthands (see #6817):
+%DIF < \let\LanguageShortHands\languageshorthands
+%DIF < \def\languageshorthands#1{}
+%DIF < $endif$
+%DIF < $for(header-includes)$
+%DIF < $header-includes$
+%DIF < $endfor$
+%DIF < \ifLuaTeX
+%DIF <   \usepackage{selnolig}  % disable illegal ligatures
+%DIF < \fi
+%DIF < $if(dir)$
+%DIF < \ifPDFTeX
+%DIF <   \TeXXeTstate=1
+%DIF <   \newcommand{\RL}[1]{\beginR #1\endR}
+%DIF <   \newcommand{\LR}[1]{\beginL #1\endL}
+%DIF <   \newenvironment{RTL}{\beginR}{\endR}
+%DIF <   \newenvironment{LTR}{\beginL}{\endL}
+%DIF < \fi
+%DIF < $endif$
+%DIF < $if(natbib)$
+%DIF < \usepackage[$natbiboptions$]{natbib}
+%DIF < \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+%DIF < $endif$
+%DIF < $if(biblatex)$
+%DIF < \usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+%DIF < $for(bibliography)$
+%DIF < \addbibresource{$bibliography$}
+%DIF < $endfor$
+%DIF < $endif$
+%DIF < $if(nocite-ids)$
+%DIF < \nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
+%DIF < $endif$
+%DIF < $if(csquotes)$
+%DIF < \usepackage{csquotes}
+%DIF < $endif$
+%DIF < \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+%DIF < \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+%DIF < \urlstyle{$if(urlstyle)$$urlstyle$$else$same$endif$}
+%DIF < $if(links-as-notes)$
+%DIF < % Make links footnotes instead of hotlinks:
+%DIF < \DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
+%DIF < $endif$
+%DIF < $if(verbatim-in-note)$
+%DIF < \VerbatimFootnotes % allow verbatim text in footnotes
+%DIF < $endif$
+%DIF < \hypersetup{
+%DIF < $if(title-meta)$
+%DIF <   pdftitle={$title-meta$},
+%DIF < $endif$
+%DIF < $if(author-meta)$
+%DIF <   pdfauthor={$author-meta$},
+%DIF < $endif$
+%DIF < $if(lang)$
+%DIF <   pdflang={$lang$},
+%DIF < $endif$
+%DIF < $if(subject)$
+%DIF <   pdfsubject={$subject$},
+%DIF < $endif$
+%DIF < $if(keywords)$
+%DIF <   pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+%DIF < $endif$
+%DIF < $if(colorlinks)$
+%DIF <   colorlinks=true,
+%DIF <   linkcolor={$if(linkcolor)$$linkcolor$$else$Maroon$endif$},
+%DIF <   filecolor={$if(filecolor)$$filecolor$$else$Maroon$endif$},
+%DIF <   citecolor={$if(citecolor)$$citecolor$$else$Blue$endif$},
+%DIF <   urlcolor={$if(urlcolor)$$urlcolor$$else$Blue$endif$},
+%DIF < $else$
+%DIF < $if(boxlinks)$
+%DIF < $else$
+%DIF <   hidelinks,
+%DIF < $endif$
+%DIF < $endif$
+%DIF <   pdfcreator={LaTeX via pandoc}}
+%DIF -------
+%%\unnumbered% uncomment this for unnumbered level heads %DIF > 
+%DIF -------
+
+%DIF < $if(title)$
+%DIF < \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+%DIF < $endif$
+%DIF < $if(subtitle)$
+%DIF < $if(beamer)$
+%DIF < $else$
+%DIF < \usepackage{etoolbox}
+%DIF < \makeatletter
+%DIF < \providecommand{\subtitle}[1]{% add subtitle to \maketitle
+%DIF <   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+%DIF < }
+%DIF < \makeatother
+%DIF < $endif$
+%DIF < \subtitle{$subtitle$}
+%DIF < $endif$
+%DIF < \author{$for(author)$$author$$sep$ \and $endfor$}
+%DIF < \date{$date$}
+%DIF < $if(beamer)$
+%DIF < $if(institute)$
+%DIF < \institute{$for(institute)$$institute$$sep$ \and $endfor$}
+%DIF < $endif$
+%DIF < $if(titlegraphic)$
+%DIF < \titlegraphic{\includegraphics{$titlegraphic$}}
+%DIF < $endif$
+%DIF < $if(logo)$
+%DIF < \logo{\includegraphics{$logo$}}
+%DIF < $endif$
+%DIF < $endif$
+%DIF DELETED TITLE COMMANDS FOR MARKUP
+\institute{\DIFdelbegin \DIFdel{$for(institute)$$institute$$sep$ }%DIFDELCMD < \and %%%
+\DIFdel{$endfor$}\DIFdelend }%DIFAUXCMD
+\title{\DIFdelbegin \DIFdel{$title$$if(thanks)$}%DIFDELCMD < \thanks{$thanks$}%%%
+\DIFdel{$endif$}\DIFdelend }%DIFAUXCMD
+\author{\DIFdelbegin \DIFdel{$for(author)$$author$$sep$ }%DIFDELCMD < \and %%%
+\DIFdel{$endfor$}\DIFdelend }%DIFAUXCMD
+\date{\DIFdelbegin \DIFdel{$date$}\DIFdelend }%DIFAUXCMD
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF COLORLISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+\DIFdelbegin \DIFdel{$if(has-frontmatter)$
+}%DIFDELCMD < \frontmatter
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$if(title)$
+$if(beamer)$
+}%DIFDELCMD < \frame{\titlepage}
+%DIFDELCMD < %%%
+\DIFdel{$else$
+}\DIFdelend \DIFaddbegin 
+
+\title[Article Title]{\DIFadd{Article Title}}
+
+%DIF > %=============================================================%%
+%DIF > % Prefix	-> \pfx{Dr}
+%DIF > % GivenName	-> \fnm{Joergen W.}
+%DIF > % Particle	-> \spfx{van der} -> surname prefix
+%DIF > % FamilyName	-> \sur{Ploeg}
+%DIF > % Suffix	-> \sfx{IV}
+%DIF > % NatureName	-> \tanm{Poet Laureate} -> Title after name
+%DIF > % Degrees	-> \dgr{MSc, PhD}
+%DIF > % \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
+%DIF > %                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
+%DIF > %=============================================================%%
+
+\author*[1,2]{\fnm{First} \sur{Author}}\email{iauthor@gmail.com}
+
+\author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
+\equalcont{These authors contributed equally to this work.}
+
+\affil*[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{100190}, \state{State}, \country{Country}}}
+
+\affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
+
+\affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
+
+%DIF > %==================================%%
+%DIF > % sample for unstructured abstract %%
+%DIF > %==================================%%
+
+\abstract{The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. Authors are advised to check the author instructions for the journal they are submitting to for word limits and if structural elements like subheadings, citations, or equations are permitted.}
+
+%DIF > %================================%%
+%DIF > % Sample for structured abstract %%
+%DIF > %================================%%
+
+%DIF >  \abstract{\textbf{Purpose:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+%DIF >  
+%DIF >  \textbf{Methods:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+%DIF >  
+%DIF >  \textbf{Results:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
+%DIF >  
+%DIF >  \textbf{Conclusion:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.}
+
+\keywords{keyword1, Keyword2, Keyword3, Keyword4}
+
+%DIF > %\pacs[JEL Classification]{D8, H51}
+
+%DIF > %\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
+
+\DIFaddend \maketitle
+\DIFdelbegin \DIFdel{$endif$
+$if(abstract)$
+}%DIFDELCMD < \begin{abstract}
+%DIFDELCMD < %%%
+\DIFdel{$abstract$
+}%DIFDELCMD < \end{abstract}
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$endif$
+}\DIFdelend 
+
+\DIFdelbegin \DIFdel{$for(include-before)$
+$include-before$
+}\DIFdelend \DIFaddbegin \section{\DIFadd{Introduction}}\label{sec1}
+\DIFaddend 
+
+\DIFdelbegin \DIFdel{$endfor$
+$if(toc)$
+$if(toc-title)$
+}%DIFDELCMD < \renewcommand*\contentsname{$toc-title$}
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$if(beamer)$
+}%DIFDELCMD < \begin{frame}[allowframebreaks]
+%DIFDELCMD < %%%
+\DIFdel{$if(toc-title)$
+  }%DIFDELCMD < \frametitle{$toc-title$}
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+  }%DIFDELCMD < \tableofcontents[hideallsubsections]
+%DIFDELCMD < \end{frame}
+%DIFDELCMD < %%%
+\DIFdel{$else$
+}%DIFDELCMD < {
+%DIFDELCMD < %%%
+\DIFdel{$if(colorlinks)$
+}%DIFDELCMD < \hypersetup{linkcolor=$if(toccolor)\begin{displaymath}toccolor\end{displaymath}else\begin{displaymath}endif$\end{displaymath}
+%DIFDELCMD < $endif$
+%DIFDELCMD < \setcounter{tocdepth}{$toc-depth$}
+%DIFDELCMD < \tableofcontents
+%DIFDELCMD < }
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$endif$
+$if(lof)$
+}%DIFDELCMD < \listoffigures
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$if(lot)$
+}%DIFDELCMD < \listoftables
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$if(linestretch)$
+}%DIFDELCMD < \setstretch{$linestretch$}
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$if(has-frontmatter)$
+}%DIFDELCMD < \mainmatter
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$body$
+}\DIFdelend \DIFaddbegin \DIFadd{The Introduction section, of referenced text \mbox{%DIFAUXCMD
+\cite{bib1} }\hskip0pt%DIFAUXCMD
+expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
+}\DIFaddend 
+
+\DIFdelbegin \DIFdel{$if(has-frontmatter)$
+}%DIFDELCMD < \backmatter
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(has-chapters)$
+}%DIFDELCMD < \renewcommand\bibname{$biblio-title$}
+%DIFDELCMD < %%%
+\DIFdel{$else$
+}%DIFDELCMD < \renewcommand\refname{$biblio-title$}
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+$endif$
+$if(beamer)$
+}%DIFDELCMD < \begin{frame}[allowframebreaks]{$biblio-title$}
+%DIFDELCMD <   \bibliographytrue
+%DIFDELCMD < %%%
+\DIFdel{$endif$
+  }%DIFDELCMD < \bibliography{$for(bibliography)}%%%
+\DIFdelend \DIFaddbegin \DIFadd{Springer Nature does not impose a strict layout as standard however authors are advised to check the individual requirements for the journal they are planning to submit to as there may be journal-level preferences. When preparing your text please also be aware that some stylistic choices are not supported in full text XML (publication version), including coloured font. These will not be replicated in the typeset article if it is accepted. 
+}
+
+\section{\DIFadd{Results}}\label{sec2}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+}
+
+\section{\DIFadd{This is an example for first level head---section head}}\label{sec3}
+
+\subsection{\DIFadd{This is an example for second level head---subsection head}}\label{subsec2}
+
+\subsubsection{\DIFadd{This is an example for third level head---subsubsection head}}\label{subsubsec2}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. 
+}
+
+\section{\DIFadd{Equations}}\label{sec4}
+
+\DIFadd{Equations in }\LaTeX\DIFadd{\ can either be inline or on-a-line by itself (``display equations''). For
+inline equations use the }{\color{blue}%DIFAUXCMD
+\verb+$...$+ %
+}%DIFAUXCMD
+\DIFadd{commands. E.g.: The equation
+$H\psi = E \psi$ is written via the command }{\color{blue}%DIFAUXCMD
+\verb+$H \psi = E \psi$+%
+}%DIFAUXCMD
+\DIFadd{.
+}
+
+\DIFadd{For display equations (with auto generated equation numbers)
+one can use the equation or align environments:
+}\begin{equation}
+\DIFadd{\|\tilde{X}(k)\|^2 \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q}.\label{eq1}
+}\end{equation}\DIFaddend 
+\DIFdelbegin \DIFdel{bibliography$$sep$,$endfor$}
+$if(beamer)$
+\end{frame}
+$endif$
+
+$endif$
+$endif$
+$if }\DIFdelend \DIFaddbegin \DIFadd{where,
+}\begin{align}
+\DIFadd{D_\mu }&\DIFadd{=  \partial_\mu - ig \frac{\lambda^a}{2} A^a_\mu \nonumber }\\
+\DIFadd{F^a_{\mu\nu} }&\DIFadd{= \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc} A^b_\mu A^a_\nu \label{eq2}
+}\end{align}
+\DIFadd{Notice the use of }{\color{blue}%DIFAUXCMD
+\verb+\nonumber+ %
+}%DIFAUXCMD
+\DIFadd{in the align environment at the end
+of each line, except the last, so as not to produce equation numbers on
+lines where no equation numbers are required. The }{\color{blue}%DIFAUXCMD
+\verb+\label{}+ %
+}%DIFAUXCMD
+\DIFadd{command
+should only be used at the last line of an align environment where
+}{\color{blue}%DIFAUXCMD
+\verb+\nonumber+ %
+}%DIFAUXCMD
+\DIFadd{is not used.
+}\begin{equation}
+\DIFadd{Y_\infty = \left( \frac{m}{\textrm{GeV}} \right)^{-3}
+    \left[ 1 + \frac{3 \ln(m/\textrm{GeV})}{15}
+    + \frac{\ln(c_2/5)}{15} \right]
+}\end{equation}
+\DIFadd{The class file also supports the use of }{\color{blue}%DIFAUXCMD
+\verb+\mathbb{}+%
+}%DIFAUXCMD
+\DIFadd{, }{\color{blue}%DIFAUXCMD
+\verb+\mathscr{}+ %
+}%DIFAUXCMD
+\DIFadd{and
+}{\color{blue}%DIFAUXCMD
+\verb+\mathcal{}+ %
+}%DIFAUXCMD
+\DIFadd{commands. As such }{\color{blue}%DIFAUXCMD
+\verb+\mathbb{R}+%
+}%DIFAUXCMD
+\DIFadd{, }{\color{blue}%DIFAUXCMD
+\verb+\mathscr{R}+
+%
+}%DIFAUXCMD
+\DIFadd{and }{\color{blue}%DIFAUXCMD
+\verb+\mathcal{R}+ %
+}%DIFAUXCMD
+\DIFadd{produces $\mathbb{R}$, $\mathscr{R}$ and $\mathcal{R}$
+respectively (refer Subsubsection~\ref{subsubsec2}).
+}
+
+\section{\DIFadd{Tables}}\label{sec5}
+
+\DIFadd{Tables can be inserted via the normal table and tabular environment. To put
+footnotes inside tables you should use }{\color{blue}%DIFAUXCMD
+\verb+\footnotetext[]{...}+ %
+}%DIFAUXCMD
+\DIFadd{tag.
+The footnote appears just below the table itself (refer Tables~\ref{tab1} and \ref{tab2}). 
+For the corresponding footnotemark use }{\color{blue}%DIFAUXCMD
+\verb+\footnotemark[...]+
+
+%
+}%DIFAUXCMD
+\begin{table}[h]
+\begin{center}
+\begin{minipage}{174pt}
+\caption{\DIFaddFL{Caption text}}\label{tab1}%DIF > 
+\begin{tabular}{@{}llll@{}}
+\toprule
+\DIFaddFL{Column 1 }& \DIFaddFL{Column 2  }& \DIFaddFL{Column 3 }& \DIFaddFL{Column 4}\\
+\midrule
+\DIFaddFL{row 1    }& \DIFaddFL{data 1   }& \DIFaddFL{data 2  }& \DIFaddFL{data 3  }\\
+\DIFaddFL{row 2    }& \DIFaddFL{data 4   }& \DIFaddFL{data 5}\footnotemark[1]  & \DIFaddFL{data 6  }\\
+\DIFaddFL{row 3    }& \DIFaddFL{data 7   }& \DIFaddFL{data 8  }& \DIFaddFL{data 9}\footnotemark[2]  \\
+\botrule
+\end{tabular}
+\footnotetext{\DIFaddFL{Source: This is an example of table footnote. This is an example of table footnote.}}
+\footnotetext[1]{\DIFaddFL{Example for a first table footnote. This is an example of table footnote.}}
+\footnotetext[2]{\DIFaddFL{Example for a second table footnote. This is an example of table footnote.}}
+\end{minipage}
+\end{center}
+\end{table}
+
+\noindent
+\DIFadd{The input format for the above table is as follows:
+}
+
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+\bigskip
+\DIFmodbegin
+\begin{DIFverbatim}[alsolanguage=DIFcode]
+%DIF > \begin{table}[<placement-specifier>]
+%DIF > \begin{center}
+%DIF > \begin{minipage}{<preferred-table-width>}
+%DIF > \caption{<table-caption>}\label{<table-label>}%
+%DIF > \begin{tabular}{@{}llll@{}}
+%DIF > \toprule
+%DIF > Column 1 & Column 2 & Column 3 & Column 4\\
+%DIF > \midrule
+%DIF > row 1 & data 1 & data 2	 & data 3 \\
+%DIF > row 2 & data 4 & data 5\footnotemark[1] & data 6 \\
+%DIF > row 3 & data 7 & data 8	 & data 9\footnotemark[2]\\
+%DIF > \botrule
+%DIF > \end{tabular}
+%DIF > \footnotetext{Source: This is an example of table footnote. 
+%DIF > This is an example of table footnote.}
+%DIF > \footnotetext[1]{Example for a first table footnote.
+%DIF > This is an example of table footnote.}
+%DIF > \footnotetext[2]{Example for a second table footnote. 
+%DIF > This is an example of table footnote.}
+%DIF > \end{minipage}
+%DIF > \end{center}
+%DIF > \end{table}
+\end{DIFverbatim}
+\DIFmodend
+\bigskip
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+
+\begin{table}[h]
+\begin{center}
+\begin{minipage}{\textwidth}
+\caption{\DIFaddFL{Example of a lengthy table which is set to full textwidth}}\label{tab2}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{\extracolsep{\fill}}}
+\toprule%DIF > 
+& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]} & \multicolumn{3}{@{}c@{}}{Element 2\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%DIF > 
+\DIFaddFL{Project }& \DIFaddFL{Energy }& \DIFaddFL{$\sigma_{calc}$ }& \DIFaddFL{$\sigma_{expt}$ }& \DIFaddFL{Energy }& \DIFaddFL{$\sigma_{calc}$ }& \DIFaddFL{$\sigma_{expt}$ }\\
+\midrule
+\DIFaddFL{Element 3  }& \DIFaddFL{990 A }& \DIFaddFL{1168 }& \DIFaddFL{$1547\pm12$ }& \DIFaddFL{780 A }& \DIFaddFL{1166 }& \DIFaddFL{$1239\pm100$}\\
+\DIFaddFL{Element 4  }& \DIFaddFL{500 A }& \DIFaddFL{961  }& \DIFaddFL{$922\pm10$  }& \DIFaddFL{900 A }& \DIFaddFL{1268 }& \DIFaddFL{$1092\pm40$}\\
+\botrule
+\end{tabular*}
+\footnotetext{\DIFaddFL{Note: This is an example of table footnote. This is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}}
+\footnotetext[1]{\DIFaddFL{Example for a first table footnote.}}
+\footnotetext[2]{\DIFaddFL{Example for a second table footnote.}}
+\end{minipage}
+\end{center}
+\end{table}
+
+\DIFadd{In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use }{\color{blue}%DIFAUXCMD
+\verb+\begin{table*}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{table*}+ %
+}%DIFAUXCMD
+\DIFadd{instead of }{\color{blue}%DIFAUXCMD
+\verb+\begin{table}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{table}+ %
+}%DIFAUXCMD
+\DIFadd{environment. Lengthy tables which do not fit in textwidth should be set as rotated table. For this, you need to use }{\color{blue}%DIFAUXCMD
+\verb+\begin{sidewaystable}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{sidewaystable}+ %
+}%DIFAUXCMD
+\DIFadd{instead of }{\color{blue}%DIFAUXCMD
+\verb+\begin{table*}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{table*}+ %
+}%DIFAUXCMD
+\DIFadd{environment. This environment puts tables rotated to single column width. For tables rotated to double column width, use }{\color{blue}%DIFAUXCMD
+\verb+\begin{sidewaystable*}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{sidewaystable*}+%
+}%DIFAUXCMD
+\DIFadd{.
+}
+
+\begin{sidewaystable}
+\sidewaystablefn%DIF > 
+\begin{center}
+\begin{minipage}{\textheight}
+\caption{\DIFadd{Tables which are too long to fit, should be written using the ``sidewaystable'' environment as shown here}}\label{tab3}
+\begin{tabular*}{\textheight}{@{\extracolsep{\fill}}lcccccc@{\extracolsep{\fill}}}
+\toprule%DIF > 
+& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]}& \multicolumn{3}{@{}c@{}}{Element\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%DIF > 
+\DIFadd{Projectile }& \DIFadd{Energy	}& \DIFadd{$\sigma_{calc}$ }& \DIFadd{$\sigma_{expt}$ }& \DIFadd{Energy }& \DIFadd{$\sigma_{calc}$ }& \DIFadd{$\sigma_{expt}$ }\\
+\midrule
+\DIFadd{Element 3 }& \DIFadd{990 A }& \DIFadd{1168 }& \DIFadd{$1547\pm12$ }& \DIFadd{780 A }& \DIFadd{1166 }& \DIFadd{$1239\pm100$ }\\
+\DIFadd{Element 4 }& \DIFadd{500 A }& \DIFadd{961  }& \DIFadd{$922\pm10$  }& \DIFadd{900 A }& \DIFadd{1268 }& \DIFadd{$1092\pm40$ }\\
+\DIFadd{Element 5 }& \DIFadd{990 A }& \DIFadd{1168 }& \DIFadd{$1547\pm12$ }& \DIFadd{780 A }& \DIFadd{1166 }& \DIFadd{$1239\pm100$ }\\
+\DIFadd{Element 6 }& \DIFadd{500 A }& \DIFadd{961  }& \DIFadd{$922\pm10$  }& \DIFadd{900 A }& \DIFadd{1268 }& \DIFadd{$1092\pm40$ }\\
+\botrule
+\end{tabular*}
+\footnotetext{\DIFadd{Note: This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}}
+\footnotetext[1]{\DIFadd{This is an example of table footnote.}}
+\end{minipage}
+\end{center}
+\end{sidewaystable}
+
+\section{\DIFadd{Figures}}\label{sec6}
+
+\DIFadd{As per the }\LaTeX\DIFadd{\ standards you need to use eps images for }\LaTeX\DIFadd{\ compilation and }{\color{blue}%DIFAUXCMD
+\verb+pdf/jpg/png+ %
+}%DIFAUXCMD
+\DIFadd{images for }{\color{blue}%DIFAUXCMD
+\verb+PDFLaTeX+ %
+}%DIFAUXCMD
+\DIFadd{compilation. This is one of the major difference between }\LaTeX\DIFadd{\ and }{\color{blue}%DIFAUXCMD
+\verb+PDFLaTeX+%
+}%DIFAUXCMD
+\DIFadd{. Each image should be from a single input .eps/vector image file. Avoid using subfigures. The command for inserting images for }\LaTeX\DIFadd{\ and }{\color{blue}%DIFAUXCMD
+\verb+PDFLaTeX+ %
+}%DIFAUXCMD
+\DIFadd{can be generalized. The package used to insert images in }{\color{blue}%DIFAUXCMD
+\verb+LaTeX/PDFLaTeX+ %
+}%DIFAUXCMD
+\DIFadd{is the graphicx package. Figures can be inserted via the normal figure environment as shown in the below example:
+}
+
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+\bigskip
+\DIFmodbegin
+\begin{DIFverbatim}[alsolanguage=DIFcode]
+%DIF > \begin{figure}[<placement-specifier>]
+%DIF > \centering
+%DIF > \includegraphics{<eps-file>}
+%DIF > \caption{<figure-caption>}\label{<figure-label>}
+%DIF > \end{figure}
+\end{DIFverbatim}
+\DIFmodend
+\bigskip
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+
+\begin{figure}[h]%DIF > 
+\centering
+\includegraphics[width=0.9\textwidth]{fig.eps}
+\caption{\DIFaddFL{This is a widefig. This is an example of long caption this is an example of long caption  this is an example of long caption this is an example of long caption}}\label{fig1}
+\end{figure}
+
+\DIFadd{In case of double column layout, the above format puts figure captions/images to single column width. To get spanned images, we need to provide }{\color{blue}%DIFAUXCMD
+\verb+\begin{figure*}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{figure*}+%
+}%DIFAUXCMD
+\DIFadd{.
+}
+
+\DIFadd{For sample purpose, we have included the width of images in the optional argument of }{\color{blue}%DIFAUXCMD
+\verb+\includegraphics+ %
+}%DIFAUXCMD
+\DIFadd{tag. Please ignore this. 
+}
+
+\section{\DIFadd{Algorithms, Program codes and Listings}}\label{sec7}
+
+\DIFadd{Packages }{\color{blue}%DIFAUXCMD
+\verb+algorithm+%
+}%DIFAUXCMD
+\DIFadd{, }{\color{blue}%DIFAUXCMD
+\verb+algorithmicx+ %
+}%DIFAUXCMD
+\DIFadd{and }{\color{blue}%DIFAUXCMD
+\verb+algpseudocode+ %
+}%DIFAUXCMD
+\DIFadd{are used for setting algorithms in }\LaTeX\DIFadd{\ using the format:
+}
+
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+\bigskip
+\DIFmodbegin
+\begin{DIFverbatim}[alsolanguage=DIFcode]
+%DIF > \begin{algorithm}
+%DIF > \caption{<alg-caption>}\label{<alg-label>}
+%DIF > \begin{algorithmic}[1]
+%DIF > . . .
+%DIF > \end{algorithmic}
+%DIF > \end{algorithm}
+\end{DIFverbatim}
+\DIFmodend
+\bigskip
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+
+\DIFadd{You may refer above listed package documentations for more details before setting }{\color{blue}%DIFAUXCMD
+\verb+algorithm+ %
+}%DIFAUXCMD
+\DIFadd{environment. For program codes, the ``program'' package is required and the command to be used is }{\color{blue}%DIFAUXCMD
+\verb+\begin{program}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{program}+%
+}%DIFAUXCMD
+\DIFadd{. A fast exponentiation procedure:
+}
+
+\begin{program}
+\BEGIN \\ %DIF > 
+  \FOR \DIFadd{i:=1 }\TO \DIFadd{10 }\STEP \DIFadd{1 }\DO
+     \DIFadd{|expt|}\DIFaddend (\DIFdelbegin \DIFdel{biblatex)$
+$if(beamer)
+$
+\begin{frame}[allowframebreaks]{$biblio-title$}
+  \bibliographytrue
+  \printbibliography[heading=none]
+\end{frame}
+$else$
+\printbibliography$if (biblio-title) $[title=$biblio-title$]$endif$
+$endif$
+
+$endif$
+$for (include-after) $
+$include-after$
+
+$endfor}\DIFdelend \DIFaddbegin \DIFadd{2,i); }\\ \DIFadd{|newline|() }\OD %DIF > 
+\rcomment{Comments will be set flush to the right margin}
+\WHERE
+\PROC \DIFadd{|expt|(x,n) }\BODY
+          \DIFadd{z:=1;
+          }\DO \IF \DIFadd{n=0 }\THEN \EXIT \FI\DIFadd{;
+             }\DO \IF \DIFadd{|odd|(n) }\THEN \EXIT \FI\DIFadd{;
+}\COMMENT{This is a comment statement}\DIFadd{;
+                n:=n/2; x:=x*x }\OD\DIFadd{;
+             \{ n>0 \};
+             n:=n-1; z:=z*x }\OD\DIFadd{;
+          |print|(z) }\ENDPROC
+\END
+\end{program}
+
+
+\begin{algorithm}
+\caption{\DIFadd{Calculate $y = x^n$}}\label{algo1}
+\begin{algorithmic}[1]
+\Require \DIFadd{$n \geq 0 \vee x \neq 0$
+}\Ensure \DIFadd{$y = x^n$ 
+}\State \DIFadd{$y \Leftarrow 1$
+}\If{$n < 0$}\label{algln2}
+        \State \DIFadd{$X \Leftarrow 1 / x$
+        }\State \DIFadd{$N \Leftarrow -n$
+}\Else
+        \State \DIFadd{$X \Leftarrow x$
+        }\State \DIFadd{$N \Leftarrow n$
+}\EndIf
+\While{$N \neq 0$}
+        \If{$N$ is even}
+            \State \DIFadd{$X \Leftarrow X \times X$
+            }\State \DIFadd{$N \Leftarrow N / 2$
+        }\Else[$N$ is odd]
+            \State \DIFadd{$y \Leftarrow y \times X$
+            }\State \DIFadd{$N \Leftarrow N - 1$
+        }\EndIf
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+\bigskip
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+
+\DIFadd{Similarly, for }{\color{blue}%DIFAUXCMD
+\verb+listings+%
+}%DIFAUXCMD
+\DIFadd{, use the }{\color{blue}%DIFAUXCMD
+\verb+listings+ %
+}%DIFAUXCMD
+\DIFadd{package. }{\color{blue}%DIFAUXCMD
+\verb+\begin{lstlisting}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{lstlisting}+ %
+}%DIFAUXCMD
+\DIFadd{is used to set environments similar to }{\color{blue}%DIFAUXCMD
+\verb+verbatim+ %
+}%DIFAUXCMD
+\DIFadd{environment. Refer to the }{\color{blue}%DIFAUXCMD
+\verb+lstlisting+ %
+}%DIFAUXCMD
+\DIFadd{package documentation for more details.
+}
+
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+\bigskip
+\begin{minipage}{\hsize}%DIF > 
+\lstset{frame=single,framexleftmargin=-1pt,framexrightmargin=-17pt,framesep=12pt,linewidth=0.98\textwidth,language=pascal}%DIF >  Set your language (you can change the language for each code-block optionally)
+%DIF > %% Start your code-block
+\DIFmodbegin
+\begin{lstlisting}[alsolanguage=DIFcode]
+%DIF > for i:=maxint to 0 do
+%DIF > begin
+%DIF > { do nothing }
+%DIF > end;
+%DIF > Write('Case insensitive ');
+%DIF > Write('Pascal keywords.');
+\end{lstlisting}
+\DIFmodend
+\end{minipage}
+
+\section{\DIFadd{Cross referencing}}\label{sec8}
+
+\DIFadd{Environments such as figure, table, equation and align can have a label
+declared via the }{\color{blue}%DIFAUXCMD
+\verb+\label{#label}+ %
+}%DIFAUXCMD
+\DIFadd{command. For figures and table
+environments use the }{\color{blue}%DIFAUXCMD
+\verb+\label{}+ %
+}%DIFAUXCMD
+\DIFadd{command inside or just
+below the }{\color{blue}%DIFAUXCMD
+\verb+\caption{}+ %
+}%DIFAUXCMD
+\DIFadd{command. You can then use the
+}{\color{blue}%DIFAUXCMD
+\verb+\ref{#label}+ %
+}%DIFAUXCMD
+\DIFadd{command to cross-reference them. As an example, consider
+the label declared for Figure~\ref{fig1} which is
+}{\color{blue}%DIFAUXCMD
+\verb+\label{fig1}+%
+}%DIFAUXCMD
+\DIFadd{. To cross-reference it, use the command 
+}{\color{blue}%DIFAUXCMD
+\verb+Figure \ref{fig1}+%
+}%DIFAUXCMD
+\DIFadd{, for which it comes up as
+``Figure~\ref{fig1}''. 
+}
+
+\DIFadd{To reference line numbers in an algorithm, consider the label declared for the line number 2 of Algorithm~\ref{algo1} is }{\color{blue}%DIFAUXCMD
+\verb+\label{algln2}+%
+}%DIFAUXCMD
+\DIFadd{. To cross-reference it, use the command }{\color{blue}%DIFAUXCMD
+\verb+\ref{algln2}+ %
+}%DIFAUXCMD
+\DIFadd{for which it comes up as line~\ref{algln2} of Algorithm~\ref{algo1}.
+}
+
+\subsection{\DIFadd{Details on reference citations}}\label{subsec7}
+
+\DIFadd{Standard }\LaTeX\DIFadd{\ permits only numerical citations. To support both numerical and author-year citations this template uses }{\color{blue}%DIFAUXCMD
+\verb+natbib+ %
+}%DIFAUXCMD
+\LaTeX\DIFadd{\ package. For style guidance please refer to the template user manual.
+}
+
+\DIFadd{Here is an example for }{\color{blue}%DIFAUXCMD
+\verb+\cite{...}+%
+}%DIFAUXCMD
+\DIFadd{: \mbox{%DIFAUXCMD
+\cite{bib1}}\hskip0pt%DIFAUXCMD
+. Another example for }{\color{blue}%DIFAUXCMD
+\verb+\citep{...}+%
+}%DIFAUXCMD
+\DIFadd{: \mbox{%DIFAUXCMD
+\citep{bib2}}\hskip0pt%DIFAUXCMD
+. For author-year citation mode, }{\color{blue}%DIFAUXCMD
+\verb+\cite{...}+ %
+}%DIFAUXCMD
+\DIFadd{prints Jones et al. (1990) and }{\color{blue}%DIFAUXCMD
+\verb+\citep{...}+ %
+}%DIFAUXCMD
+\DIFadd{prints (Jones et al., 1990).
+}
+
+\DIFadd{All cited bib entries are printed at the end of this article: \mbox{%DIFAUXCMD
+\cite{bib3}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib4}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib5}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib6}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib7}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib8}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib9}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib10}}\hskip0pt%DIFAUXCMD
+, \mbox{%DIFAUXCMD
+\cite{bib11} }\hskip0pt%DIFAUXCMD
+and \mbox{%DIFAUXCMD
+\cite{bib12}}\hskip0pt%DIFAUXCMD
+.
+}
+
+\section{\DIFadd{Examples for theorem like environments}}\label{sec10}
+
+\DIFadd{For theorem like environments, we require }{\color{blue}%DIFAUXCMD
+\verb+amsthm+ %
+}%DIFAUXCMD
+\DIFadd{package. There are three types of predefined theorem styles exists---}{\color{blue}%DIFAUXCMD
+\verb+thmstyleone+%
+}%DIFAUXCMD
+\DIFadd{, }{\color{blue}%DIFAUXCMD
+\verb+thmstyletwo+ %
+}%DIFAUXCMD
+\DIFadd{and }{\color{blue}%DIFAUXCMD
+\verb+thmstylethree+ 
+
+%
+}%DIFAUXCMD
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+\bigskip
+\begin{tabular}{|l|p{19pc}|}
+\hline
+{\color{blue}%DIFAUXCMD
+\verb+thmstyleone+ %
+}%DIFAUXCMD
+& \DIFadd{Numbered, theorem head in bold font and theorem text in italic style }\\\hline
+{\color{blue}%DIFAUXCMD
+\verb+thmstyletwo+ %
+}%DIFAUXCMD
+& \DIFadd{Numbered, theorem head in roman font and theorem text in italic style }\\\hline
+{\color{blue}%DIFAUXCMD
+\verb+thmstylethree+ %
+}%DIFAUXCMD
+& \DIFadd{Numbered, theorem head in bold font and theorem text in roman style }\\\hline
+\end{tabular}
+\bigskip
+%DIF > %=============================================%%
+%DIF > % For presentation purpose, we have included  %%
+%DIF > % \bigskip command. please ignore this.       %%
+%DIF > %=============================================%%
+
+\DIFadd{For mathematics journals, theorem styles can be included as shown in the following examples:
+}
+
+\begin{theorem}[Theorem subhead]\label{thm1}
+\DIFadd{Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
+Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
+Example theorem text. 
+}\end{theorem}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+}
+
+\begin{proposition}
+\DIFadd{Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
+Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
+}\end{proposition}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+}
+
+\begin{example}
+\DIFadd{Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
+}\end{example}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+}
+
+\begin{remark}
+\DIFadd{Phasellus adipiscing semper elit. Proin fermentum massa
+ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
+at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
+}\end{remark}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+}
+
+\begin{definition}[Definition sub head]
+\DIFadd{Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. 
+}\end{definition}
+
+\DIFadd{Additionally a predefined ``proof'' environment is available: }{\color{blue}%DIFAUXCMD
+\verb+\begin{proof}+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+...+ %
+}%DIFAUXCMD
+{\color{blue}%DIFAUXCMD
+\verb+\end{proof}+%
+}%DIFAUXCMD
+\DIFadd{. This prints a ``Proof'' head in italic font style and the ``body text'' in roman font style with an open square at the end of each proof environment. 
+}
+
+\begin{proof}
+\DIFadd{Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
+}\end{proof}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
+}
+
+\begin{proof}[Proof of Theorem~{\upshape\ref{thm1}}]
+\DIFadd{Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
+}\end{proof}
+
+\noindent
+\DIFadd{For a quote environment, use }{\color{blue}%DIFAUXCMD
+\verb+\begin{quote}...\end{quote}+
+%
+}%DIFAUXCMD
+\begin{quote}
+\DIFadd{Quoted text example. Aliquam porttitor quam a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
+convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
+}\end{quote}
+
+\DIFadd{Sample body text. Sample body text. Sample body text. Sample body text. Sample body text (refer Figure~\ref{fig1}). Sample body text. Sample body text. Sample body text (refer Table~\ref{tab3}). 
+}
+
+\section{\DIFadd{Methods}}\label{sec11}
+
+\DIFadd{Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work. Authors are encouraged to include RIIDs where appropriate. 
+}
+
+\textbf{\DIFadd{Ethical approval declarations}} \DIFadd{(only required where applicable) Any article reporting experiment/s carried out on (i)~live vertebrate (or higher invertebrates), (ii)~humans or (iii)~human samples must include an unambiguous statement within the methods section that meets the following requirements: 
+}
+
+\begin{enumerate}[1.]
+\item \DIFadd{Approval: a statement which confirms that all experimental protocols were approved by a named institutional and/or licensing committee. Please identify the approving body in the methods section
+}
+
+\item \DIFadd{Accordance: a statement explicitly saying that the methods were carried out in accordance with the relevant guidelines and regulations
+}
+
+\item \DIFadd{Informed consent (for experiments involving humans or human tissue samples): include a statement confirming that informed consent was obtained from all participants and/or their legal guardian/s
+}\end{enumerate}
+
+\DIFadd{If your manuscript includes potentially identifying patient/participant information, or if it describes human transplantation research, or if it reports results of a clinical trial then  additional information will be required. Please visit (}\url{https://www.nature.com/nature-research/editorial-policies}\DIFadd{) for Nature Portfolio journals, (}\url{https://www.springer.com/gp/authors-editors/journal-author/journal-author-helpdesk/publishing-ethics/14214}\DIFadd{) for Springer Nature journals, or (}\url{https://www.biomedcentral.com/getpublished/editorial-policies\#ethics+and+consent}\DIFadd{) for BMC.
+}
+
+\section{\DIFadd{Discussion}}\label{sec12}
+
+\DIFadd{Discussions should be brief and focused. In some disciplines use of Discussion or `Conclusion' is interchangeable. It is not mandatory to use both. Some journals prefer a section `Results and Discussion' followed by a section `Conclusion'. Please refer to Journal-level guidance for any specific requirements. 
+}
+
+\section{\DIFadd{Conclusion}}\label{sec13}
+
+\DIFadd{Conclusions may be used to restate your hypothesis or research question, restate your major findings, explain the relevance and the added value of your work, highlight any limitations of your study, describe future directions for research and recommendations. 
+}
+
+\DIFadd{In some disciplines use of Discussion or 'Conclusion' is interchangeable. It is not mandatory to use both. Please refer to Journal-level guidance for any specific requirements. 
+}
+
+\backmatter
+
+\bmhead{Supplementary information}
+
+\DIFadd{If your article has accompanying supplementary file/s please state so here. 
+}
+
+\DIFadd{Authors reporting data from electrophoretic gels and blots should supply the full unprocessed scans for key as part of their Supplementary information. This may be requested by the editorial team/s if it is missing.
+}
+
+\DIFadd{Please refer to Journal-level guidance for any specific requirements.
+}
+
+\bmhead{Acknowledgments}
+
+\DIFadd{Acknowledgments are not compulsory. Where included they should be brief. Grant or contribution numbers may be acknowledged.
+}
+
+\DIFadd{Please refer to Journal-level guidance for any specific requirements.
+}
+
+\section*{\DIFadd{Declarations}}
+
+\DIFadd{Some journals require declarations to be submitted in a standardised format. Please check the Instructions for Authors of the journal to which you are submitting to see if you need to complete this section. If yes, your manuscript must contain the following sections under the heading `Declarations':
+}
+
+\begin{itemize}
+\item \DIFadd{Funding
+}\item \DIFadd{Conflict of interest/Competing interests (check journal-specific guidelines for which heading to use)
+}\item \DIFadd{Ethics approval 
+}\item \DIFadd{Consent to participate
+}\item \DIFadd{Consent for publication
+}\item \DIFadd{Availability of data and materials
+}\item \DIFadd{Code availability 
+}\item \DIFadd{Authors' contributions
+}\end{itemize}
+
+\noindent
+\DIFadd{If any of the sections are not relevant to your manuscript, please include the heading and write `Not applicable' for that section. 
+}
+
+%DIF > %===================================================%%
+%DIF > % For presentation purpose, we have included        %%
+%DIF > % \bigskip command. please ignore this.             %%
+%DIF > %===================================================%%
+\bigskip
+\begin{flushleft}%DIF > 
+\DIFadd{Editorial Policies for:
+}
+
+\bigskip\noindent
+\DIFadd{Springer journals and proceedings: }\url{https://www.springer.com/gp/editorial-policies}
+
+\bigskip\noindent
+\DIFadd{Nature Portfolio journals: }\url{https://www.nature.com/nature-research/editorial-policies}
+
+\bigskip\noindent
+\textit{\DIFadd{Scientific Reports}}\DIFadd{: }\url{https://www.nature.com/srep/journal-policies/editorial-policies}
+
+\bigskip\noindent
+\DIFadd{BMC journals: }\url{https://www.biomedcentral.com/getpublished/editorial-policies}
+\end{flushleft}
+
+\begin{appendices}
+
+\section{\DIFadd{Section title of first appendix}}\label{secA1}
+
+\DIFadd{An appendix contains supplementary information that is not an essential part of the text itself but which may be helpful in providing a more comprehensive understanding of the research problem or it is information that is too cumbersome to be included in the body of the paper.
+}
+
+%DIF > %=============================================%%
+%DIF > % For submissions to Nature Portfolio Journals %%
+%DIF > % please use the heading ``Extended Data''.   %%
+%DIF > %=============================================%%
+
+%DIF > %=============================================================%%
+%DIF > % Sample for another appendix section			       %%
+%DIF > %=============================================================%%
+
+%DIF > % \section{Example of another appendix section}\label{secA2}%
+%DIF > % Appendices may be used for helpful, supporting or essential material that would otherwise 
+%DIF > % clutter, break up or be distracting to the text. Appendices can consist of sections, figures, 
+%DIF > % tables and equations etc.
+
+\end{appendices}
+
+%DIF > %===========================================================================================%%
+%DIF > % If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
+%DIF > % system, please include the references within the manuscript file itself. You may do this  %%
+%DIF > % by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
+%DIF > % file, and delete the associated {\color{blue}%DIFAUXCMD
+\verb+\bibliography+ %
+}%DIFAUXCMD
+commands.                            %%
+%DIF > %===========================================================================================%%
+
+\bibliography{sn-bibliography}%DIF >  common bib file
+%DIF > % if required, the content of .bbl file can be included here once bbl is generated
+%DIF > %\input sn-article.bbl
+
+%DIF > % Default %%
+%DIF > %\input sn-sample-bib.tex%
+
+ \DIFaddend\end{document}
