@@ -1,12 +1,12 @@
 ---
-title: Emergence of evolutionary stable correlation as a core problem of social ontology
+title: Evolutionary stable correlation as a core problem of social ontology
 author: Valerii Shevchenko
 affiliation: HSE University
 abstract: 
 keywords: Social ontology, evolutionary game theory
 ---
 
-# Emergence of evolutionary stable correlation as a core problem of social ontology
+# Evolutionary stable correlation as a core problem of social ontology
 
 ## Introduction
 In this paper, I argue that the emergence of evolutionary stable correlation is the core issue of naturalistic social ontology. According to rules-in-equilibria theory, social institutions are the central unit of social ontology [@guala2016b], and coordination is its main mechanism rooted in evolution [@shevchenko2023]. As institutions are normatively-driven self-sustaining behavioral regularities designed to solve coordination problems [@aoki2007], they share many features with 'animal conventions' that help animals solve coordination problems and maintain stable relationships [@hindriks2015]. Consequently, understanding the emergence of social institutions requires an examination of the evolutionary mechanisms that enable correlation of strategies with normative force as a key characteristic.
@@ -50,7 +50,7 @@ It is relevant, for if social institutions have emerged from 'animal conventions
 
 This paper is structured as follows. First, it discusses the relationship between social institutions, conventions, and norms, and how conventions emerge through Skyrms's deliberational dynamics and Harms's evolutionary functionalism. Second, it examines the correlation and asymmetry of strategies in the emergence of social institutions and explains what correlated equilibrium and uncorrelated asymmetry mean. Two views on correlation versus asymmetry are also discussed. Third, the paper explores the problem with correlation in social institutions as evolved correlated equilibria. It analyzes Guala's argument about the difference in scope of actionable signals in animals versus humans and Skyrms's interpretation of Maynard Smith's “bourgeois” concept. Fourth, it delves into the tension between bourgeois and correlated equilibria with a formal distinction between mixed strategy and correlated equilibria, as well as addressing where randomization of strategies comes from.
 
-## Difference and evolution of conventions, norms, and institutions
+## Institutions vs. norms vs. conventions
 Let us start with the notion of social institutions and move backwards. According to @guala2016b, institutions are rules-in-equilibria, normatively-driven behavioral regularities represented as correlated equilibria. “Rules” here are the recipes guiding and prescribing certain behavior and are *used by the agents themselves*, and ”equilibria” are objective stable states of the strategic interaction between agents and population thereof. Other scholars pinpoint normative and self-sustaining nature of institutions. They are "humanly devised constraints that shape human interactions" [@north1990], "norm-governed social practices" [@tuomela2013] and "self-sustaining salient behavioral patterns" [@aoki2007]. It can be seen that institutions combine "subjective" and "objective" components: they are driven by social norms, that might vary from one population to another, and, at the same time, constrain possible actions and sustain itself.
 
 If social norms are inherently important to institutions, what are they, and how do they differ from social institutions? According to @bicchieri2005, social norms are shared expectations, or "rules", about how people should behave in a given context. These expectations can be either prescriptive, telling individuals what they ought to do, or descriptive, reflecting what most people actually do. Social norms can be modeled as a set of rules or constraints that guide individual behavior. For example, let $X$ be the set of all possible behaviors that an individual can choose from in a given situation. A social norm $N$ can then be represented as a subset of $X$ that specifies which behaviors are considered acceptable or desirable by the group: $N \subseteq X$. The power of social norms lies in their ability to shape behavior without the need for formal enforcement mechanisms like laws or explicit regulations. Individuals often conform to social norms because they want to fit in and be accepted by their peers, or because they believe that following the norm is the right thing to do. Thus, norms are shared expectations about behavior in certain situations and institutions are behavioral patterns that are governed by such shared expectations.
@@ -76,6 +76,54 @@ In this game, two drivers must choose whether to drive on the left or right side
 If conventions are mutually expected and mutually beneficial behavioral regularities, how are they different from both social norms and social institutions? O'Connor (2019) draws two crucial distinctions, namely between conventions and social norms, and between more and less arbitrary conventions. The initial distinction implies that not all behavioral regularities possess normative force, meaning that conventions and norms are not that the same. For instance, friends may have a convention of meeting every Friday evening at a bar, and failing to show up does not necessarily imply a violation of a norm. However, when two cars are driving in the same direction towards each other on the same side of the road, the drivers are compelled to swerve to avoid collision. Failing to do so may result in fines or even accidents; hence, swerving becomes an obligatory normative action.
 
 Furthermore, as Bicchieri (2005) asserts, conventions differ from social norms in their association with self-interest and common interest. While they converge with self-interest, they do not necessarily coincide with common interest. In the case of friends gathering at a bar, there is minimal or no tension between self-interest and common interest; however, when driving cars on the road, there is an inherent tension between these interests. O'Connor notes that conventions and norms exist along a continuum, where conventions can acquire normative force based on their position on this spectrum.
+
+The second distinction pertains to the arbitrary and historically contingent nature of conventions, with the recognition that they are subject to variation and could have been otherwise. This arbitrariness is a fundamental characteristic of conventions, as posited by Lewis. However, @gilbert1992 has critiqued Lewis's work, noting that not all potential resolutions to a coordination problem offer equal benefits for participants. Hence, where one mode of coordination is more desirable than another, conventionality is not entirely arbitrary. To put it differently, arbitrariness in the context of conventions illustrates a continuum ranging from contingency to necessity. For example, signaling among vervet monkeys may be construed as a convention in the Lewisian sense of recurrent behavioral patterns resolving coordination issues [cf. @harms2004; @skyrms2010]. Nevertheless, this conventionality is not historically contingent insofar as multiple solutions are equally remunerative since adaptive dynamics breaks the symmetry between equilibria. Agents may be genetically predisposed towards certain strategies. Some conventions as more functional and others as more arbitrary.
+
+Putting this into a perspective:
+- 'animal conventions' are more functional conventions where "normativity", if exists, is grounded in genetically inherited behavioral predispositions;
+- social institutions are more arbitrary conventions where normativity is grounded in advanced cognitive capacities like mindreading
+
+\begin{tikzpicture}
+	\begin{axis}[
+		title={},
+		xlabel={},
+		ylabel={},
+		xmin=-1, xmax=1,
+		ymin=-1, ymax=1,
+		xtick={1}, xticklabels={Necessary, Arbitrary}, % Sets the tick labels from bottom to top
+		ytick={1}, yticklabels={Genetically Inherited, Culturally Inherited}, % Sets the tick labels from left to right
+		]
+		 \addplot[only marks,mark size=3pt] coordinates {(-0.5, -0.5) (0.5, 0.5)}; % plot points
+		 \addplot[mark=0,fill opacity=0.3] coordinates {(1,1) (2,2)}; % fill the area between points with opacity
+		 \addplot[blue] coordinates {(1,0) (1,2)}; % vertical line from bottom to top
+		 \addplot[blue] coordinates {(0,1) (2,1)}; % horizontal line from left to right
+		 \node at (axis cs: -0.5,-0.5){Animal Conventions}; % name for first point
+		 \node at (axis cs: 0.5, 0.5){Human Social Institutions}; % name for second point
+	\end{axis}
+\end{tikzpicture}
+
+Essentially, social institutions are norm-driven conventions that require certain cognitive capacities which make recognition, complying to and changing of social norms possible[^10]. Three questions arise:
+
+- if institutions are evolved 'animal conventions', how do the latter evolve themselves?
+- do simple 'animal conventions' and social institutions evolve by the same evolutionary mechanism?
+
+Let us first consider two views on evolution of simple 'animal conventions': Skyrms' deliberational dynamics and Harms' evolutionary functionalism about conventions. 
+
+- [[@skyrms1994]], [[Vanderschraaf & Skyrms 1993]]
+- [[@harms2004]]
+
+	- Any semantic convention also referred to as a “rule”, might be considered as a “function-stabilizing mechanism” since it helps to coordinate the behaviour of different organisms or different parts of an organism to perform an evolutionary adapted biological function [@harms2004]. Fundamentally, rules are maps from conditions to processes — they say what to happen next. Rules for evolutionary adapted traits (AT) might be expressed as follows:
+	- $R_{AT} =$ {<condition,process | *AT* was selected for performing **process** in **condition** }
+	- This reads as “the rule for AT is the set of all ordered pairs with a condition in the first place and a process in the second such that AT was selected for performing the process in the conditions” (Harms: 203). Two sub-rules might be derived — for interpretation of a signal and for signal-production. A rule for interpretation for any response mechanism C is expressed as:
+	- $R(interpretation)_C =$ { <s, b> | *C* has been selected for *b*-ing when *s* is received} (Harms 2004: 204
+	- [[CEU project proposal 2020.pdf]]
+- [[@baraghith2019]]
+
+As has been shown, conventions are said to be functional. But if social institutions are 'advanced' conventions with added cognitive capacities to allow normativity, does this functionality stretch to institutions? If yes, it would mean that conventions and institutions evolve by the same mechanism. And if they do evolve by the same mechanism, the question is what ensures the emergence of cognitive capacities responsible for normativity? 
+
+@hindriks2021 claim that institutions have two main functions: etiological and teleological ones, where the first is causal and explains why they persist, and the second is evaluative and explains its purpose. The authors argue that the etiological function of institutions is to promote cooperation and the teleological function is to secure values by means of social norms, as institutions might be seen as norm-governed social practices.
+
+Hindriks and Guala build their account of functions of institutions on the basis of [Wright's (1973)](app://obsidian.md/@wright1973) analysis of biological functions, which might be summarized in two main conditions. The first is that the function _F_ of an entity _A_ is the cause of the existence of _A_. The second condition is that _F_ is a consequence of the existence of _A_, which means that _F_ is non-redundant to the existence of _A_. The same logic, as the authors argue, applies to institutions. Promotion of cooperation to solve coordination problems is presumably the cause of the persistence of institutions. And securing the normativity of institutions is their purpose.
 
 ## Correlation and asymmetry of strategies
 

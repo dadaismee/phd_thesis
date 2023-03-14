@@ -5,6 +5,8 @@ title: "Cognitive foundations of social coordination"
 subtitle: "Deliberational mechanisms of equilibrium emergence"
 subject: "PhD thesis in Philosophy of Science, HSE University, Moscow"
 author: "Valerii Shevchenko"
+header-includes:
+    - \usepackage{pgfplots}
 date: 2023
 keywords: "Technology, Philosophy, OpenSource"
 # thanks: "So Long, and Thanks for All the Fish"
