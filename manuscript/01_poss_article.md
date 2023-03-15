@@ -33,11 +33,31 @@ According to Lewis, social conventions are behavioral patterns emerging from rep
 
 Coordination problems are situations where agents have common interests and it is not evident how they can be satisfied. @oconnor2019 distinguishes two classes of coordination problems, correlative and complementary ones. In correlative coordination problems, agents need to converge on the same choice to coordinate successfully. For example, consider a driving game, where two players drive towards each other and each can choose the left or right side to drive on. If they both are on the same side and no one swerves, they might crash, and if each of them chooses a different side, they will stay safe. One important feature of this and other coordination problems is arbitrariness, meaning that it does not matter on what side both players would converge. Instead, what matters is that they either coordinate by choosing the same action, for example, swerving to the right. On the game matrix, it is represented as two non-unique equilibria. It means that either of them solves the coordination problem.
 
-**driving game fig**
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+& L & R \\
+\hline
+L & 1,1 & -1,-1 \\
+\hline
+R & -1,-1 & 1,1 \\
+\hline
+\end{tabular}
+\end{center}
 
 Complementary coordination problems, as opposed to correlative ones, require agents to perform different actions, or strategies, to coordinate successfully. As @oconnor2019 points out, division of labor and of resources are examples of this class of games. For instance, two roommates want to organize a party and invite guests. To proceed, they need to tidy up the house and order pizza delivery. If they both do the cleaning, there will be no food when the guests come, and if they both order pizza delivery, they will have plenty of food but be embarrassed by the mess at the house.
 
-**Party game fig**
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+& O & T \\
+\hline
+O & -1,-1 & 1,1 \\
+\hline
+T & 1,1 & -1,-1 \\
+\hline
+\end{tabular}
+\end{center}
 
 Regarding conventions, @oconnor2019 draws two important distinctions: between conventions and social norms, and between more and less arbitrary conventions. First distinction means that not all behavioral regularities have normative force. For example, friends have a convention of meeting each Friday evening at a bar, and showing up is not what each of them strictly ought to do, for if someone does not come, it is fine for the rest of the friends. On the contrary, if two cars are driving on the same side of the road towards each other, the drivers are forced to swerve, for otherwise they might crash. They ought to swerve, for not only might one of them be fined but they might cause an accident. To clarify, as @bicchieri2005 points out, conventions are different from social norms in the relationship between selfand common interest. They coincide in the former and do not necessarily coincide in the latter. In the case of friends at a bar, there is no or little tension between selfand common interest, while in the case of driving cars there is. O'Connor stresses that conventions and norms are the poles of a continuum along which the former acquire normative force. ^60075e
 

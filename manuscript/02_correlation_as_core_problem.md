@@ -102,12 +102,12 @@ Putting this into a perspective:
 	\end{axis}
 \end{tikzpicture}
 
-Essentially, social institutions are norm-driven conventions that require certain cognitive capacities which make recognition, complying to and changing of social norms possible[^10]. Three questions arise:
+Essentially, social institutions are norm-driven conventions that require certain cognitive capacities which make recognition, complying to and changing of social norms possible.[^10] Three questions arise:
 
 - if institutions are evolved 'animal conventions', how do the latter evolve themselves?
 - do simple 'animal conventions' and social institutions evolve by the same evolutionary mechanism?
 
-Let us first consider two views on evolution of simple 'animal conventions': Skyrms' deliberational dynamics and Harms' evolutionary functionalism about conventions. 
+Let us first consider two views on evolution of simple 'animal conventions': Skyrms' deliberational dynamics and Harms' evolutionary functionalism about conventions.
 
 - [[@skyrms1994]], [[Vanderschraaf & Skyrms 1993]]
 - [[@harms2004]]
@@ -119,11 +119,11 @@ Let us first consider two views on evolution of simple 'animal conventions': Sky
 	- [[CEU project proposal 2020.pdf]]
 - [[@baraghith2019]]
 
-As has been shown, conventions are said to be functional. But if social institutions are 'advanced' conventions with added cognitive capacities to allow normativity, does this functionality stretch to institutions? If yes, it would mean that conventions and institutions evolve by the same mechanism. And if they do evolve by the same mechanism, the question is what ensures the emergence of cognitive capacities responsible for normativity? 
+As has been shown, conventions are said to be functional. But if social institutions are 'advanced' conventions with added cognitive capacities to allow normativity, does this functionality stretch to institutions? If yes, it would mean that conventions and institutions evolve by the same mechanism. And if they do evolve by the same mechanism, the question is what ensures the emergence of cognitive capacities responsible for normativity?
 
 @hindriks2021 claim that institutions have two main functions: etiological and teleological ones, where the first is causal and explains why they persist, and the second is evaluative and explains its purpose. The authors argue that the etiological function of institutions is to promote cooperation and the teleological function is to secure values by means of social norms, as institutions might be seen as norm-governed social practices.
 
-Hindriks and Guala build their account of functions of institutions on the basis of [Wright's (1973)](app://obsidian.md/@wright1973) analysis of biological functions, which might be summarized in two main conditions. The first is that the function _F_ of an entity _A_ is the cause of the existence of _A_. The second condition is that _F_ is a consequence of the existence of _A_, which means that _F_ is non-redundant to the existence of _A_. The same logic, as the authors argue, applies to institutions. Promotion of cooperation to solve coordination problems is presumably the cause of the persistence of institutions. And securing the normativity of institutions is their purpose.
+Hindriks and Guala build their account of functions of institutions on the basis of [Wright's (1973)](app://obsidian.md/@wright1973) analysis of biological functions, which might be summarized in two main conditions. The first is that the function *F* of an entity *A* is the cause of the existence of *A*. The second condition is that *F* is a consequence of the existence of *A*, which means that *F* is non-redundant to the existence of _A_. The same logic, as the authors argue, applies to institutions. Promotion of cooperation to solve coordination problems is presumably the cause of the persistence of institutions. And securing the normativity of institutions is their purpose.
 
 ## Correlation and asymmetry of strategies
 
