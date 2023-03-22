@@ -125,30 +125,6 @@ A signaling game represents a coordination problem between world states, signals
 
 %%in latex, draw an extensive form signaling game with two world states, two signals and two acts. mark strict Nash equilibria with arrows%%
 
-\begin{tikzpicture}[shorten >=1pt, node distance=3.7cm, auto]
-		% Place nodes
-		\node[state] (A) {A};
-		\node[state] (B) [right of=A] {B};
-
-    \path[->] (A) edge [bend left] node [above] {S1} node [below] {a1} (B);
-    \path[->] (B) edge [bend left] node [above] {S2} node [below] {a2} (A);
-
-    \draw[->, thick, green!80!black, >=latex'] ([yshift=-4mm, xshift=-4mm ] A.east) to ([yshift=-4mm, xshift= 4mm ] B.west);
-    \draw[->, thick, green!80!black, >=latex'] ([yshift= 4mm , xshift=-4mm ] A.east) to ([yshift= 4mm , xshift= 4mm ] B.west);
-\end{tikzpicture}
-
-\begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
-	 \node[state] (A) {$S_1$};
-	 \node[state] (B) [right=of A] {$S_2$};
-	 \path[->]
-		(A) edge [bend right] node [above] {Signal 1} (B)
-		(B) edge [bend right] node [below] {Signal 2} (A);
-		\node[act, below of=A, yshift=-0.5cm] (a1) {Act 1};
-		\node[act, below of=B, yshift=-0.5cm](a2){Act 2};
-		\draw[->](A)--(a1);
-		\draw[->](B)--(a2);
-\end{tikzpicture}
-
 Lewis [-@lewis2008] suggests that strict Nash equilibria can establish *signaling systems*, which become conventional in a population of senders and receivers.
 
 In an evolutionary perspective of Skyrms [-@skyrms2010], signaling systems are not strict Nash equilibria, but *evolutionary stable strategies* (ESS). It is a strategy which, if adopted by a population, is resilient to invasion by any alternative strategy. It can be defined as a strtegy profile $\boldsymbol{s} = (s_1, s_2, ... , s_n)$ such that $\forall \boldsymbol{s'} \neq \boldsymbol{s}$, we have $U(\boldsymbol{s}, \boldsymbol{s}) > U(\boldsymbol{s}, \boldsymbol{s'})$, where $U$ is the average payoff of the population playing the strategies $\boldsymbol{s}$ and $\boldsymbol{s'}$ [@maynardsmith1982]. On this account, given an adaptive process that guides the behavior of agents, any signaling game iterated over time results in an ESS. Depending on initial conditions, population converges on one of the two signaling systems, what is often modeled with replicator dynamics.[^3]
@@ -160,9 +136,15 @@ It means that if state $\sigma_i$ occurs with prior probabilities $P(\sigma_i)$ 
 
 However, it is not sufficient for evolutionary account of human social coordination resulting in social institutions.
 
-Another important formal approach to the emergence of conventions is due to Harms [-@harms2004]. He synthesizes sender-receiver framework and Millikan's teleosemantics.
+Another important formal approach to the emergence of conventions is due to Harms [-@harms2004]. He synthesizes sender-receiver framework and Millikan's teleosemantics. According to this approach, any semantic convention, or “rule”, might be considered as a “function-stabilizing mechanism”. It helps to coordinate the behavior of different organisms or different parts of an organism to perform an evolutionary adapted biological function. Rules are sets of maps from conditions to processes one by one. They say what to happen next given a state of the world. Rules for evolutionary adapted traits (AT) might be expressed as
+$$R_{AT}={\{\langle c_{i,}p_{i}\rangle} \mid AT \space sel \space p_{i}\space in \space c_i\}$$
+A rule for an adaptive trait is a set of all ordered pairs of a condition and a process such that the trait was selected for performing the process $p_i$ in the conditions $c_i$. [@harms2004, 203].
 
-***
+It has been observed that animal signals not only inform about the world states, but also direct the behavior of others. For example, alarm calls of vervet monkeys both convey “Look, there is a leopard!” and “Run up the nearest tree” [@seyfarth1990; @baraghith2019]. Harms calls this “primitive content” that has both indicative and imperative functions [@harms2004, 189]. Millikan calls it “pushmi-pullyu” representation and notes that purely descriptive and directive representations require a more advanced cognitive process than primitives [@millikan2005, 166].
+
+Evolutionary development of primitive content leads to the divergence of its descriptive and directive functions due to advanced cognitive capacities. As Harms suggest, it introduces a stabilizing, or regulatory mechanism $SM$ that works “atop” of conventions as rules for adaptive traits and guides behavior in case of failure of $R_{AT}$. It employs a corrective signal $CS = \{cs_{1}, ...,cs_n\}$ to "enforce" the initial convention when a signal is not sent in the presence of a world state it was selected for:
+$$R_{SM}={\{\langle \sigma_{i} \wedge \neg m_{j} \space where \space \langle \sigma_{i,}m_{j}\rangle} \in R_{AT} \rangle\mid SM \space sel \space cs \space when \space (\sigma_{i} \wedge \neg m_{j})\}$$
+The rule for a stabilizing mechanism is a set of ordered pairs consisting of the failure of an adaptive trait in the first place and a corresponding corrective signal in the second place. If the adaptive trait fails, the stabilizing mechanism will detect this failure and send a corrective signal/action to restore it.[^1] This division is echoed in Millikan's work as firstand higher-order reproductive families [@millikan1987, 23]. According to it, conventions $R_{AT}$ are firstand stabilizing mechanisms $R_{SM}$ are second-order reproductive families that serve the same goal of restoring a first-order proper function.
 
 As has been shown, conventions are said to be functional. But if social institutions are 'advanced' conventions with added cognitive capacities to allow normativity, does this functionality stretch to institutions? If yes, it would mean that conventions and institutions evolve by the same mechanism. And if they do evolve by the same mechanism, the question is what ensures the emergence of cognitive capacities responsible for normativity?
 
@@ -178,3 +160,7 @@ Hindriks and Guala build their account of functions of institutions on the basis
 
 ## References
 [^2]: Correlated equilibrium is a general solution concept introduced by Aumann [-@aumann1974; -@aumann1987]. As opposed to the classic Nash equilibrium, where players choose their strategies independently, here players choose strategies based on a public signal the value of which they assess privately, thus coordinating their actions according to a given correlation device.
+[^1]: A strict Nash equilibrium is a Nash equilibrium where the player would even do worse by deviating unilaterally.
+[^2]: An ESS is a strategy which, if adopted by a population, is resilient to invasion by any alternative strategy. Mathematically, an ESS can be defined as a strategy profile $\boldsymbol{s} = (s_1, s_2, ... , s_n)$ such that $\forall \boldsymbol{s'} \neq \boldsymbol{s}$, we have $\pi(\boldsymbol{s}, \boldsymbol{s}) > \pi(\boldsymbol{s}, \boldsymbol{s'})$, where $\pi$ is the average payoff of the population playing the strategies $\boldsymbol{s}$ and $\boldsymbol{s'}$ [@maynardsmith1982].
+[^3]: Replicator dynamics is a mathematical model used to describe the evolution of biological populations. It is based on the idea that individuals in a population can replicate themselves over multiple generations, and that their success or failure depends on their behavior relative to other members of the population. Mathematically, it is given by $\dot{x_i} = x_i(f_i(x) - \bar{f}(x))$, where $x_i$ is the proportion of individuals in the population exhibiting a particular behavior, $f_i(x)$ is the fitness associated with that behavior, and $\bar{f}(x)$ is the average fitness in the population.
+[^1]: There is an interesting similarity between a semantic regulatory mechanism like Harms' and regulatory networks in biology, that govern the dynamical repertoire of a given system like structural and regulatory genes [[@albert2014]].
