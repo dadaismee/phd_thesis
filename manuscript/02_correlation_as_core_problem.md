@@ -86,31 +86,12 @@ Putting this into a perspective:
 - 'animal conventions' are more functional conventions where "normativity", if exists, is grounded in genetically inherited behavioral predispositions;
 - social institutions are more arbitrary conventions where normativity is grounded in advanced cognitive capacities like mindreading.
 
-\begin{tikzpicture}
-	\begin{axis}[
-		title={},
-		xlabel={},
-		ylabel={},
-		xmin=-1, xmax=1,
-		ymin=-1, ymax=1,
-		xtick={1}, xticklabels={Necessary, Arbitrary}, % Sets the tick labels from bottom to top
-		ytick={1}, yticklabels={Genetically Inherited, Culturally Inherited}, % Sets the tick labels from left to right
-		]
-		 \addplot[only marks,mark size=3pt] coordinates {(-0.5, -0.5) (0.5, 0.5)}; % plot points
-		 \addplot[mark=0,fill opacity=0.3] coordinates {(1,1) (2,2)}; % fill the area between points with opacity
-		 \addplot[blue] coordinates {(1,0) (1,2)}; % vertical line from bottom to top
-		 \addplot[blue] coordinates {(0,1) (2,1)}; % horizontal line from left to right
-		 \node at (axis cs: -0.5,-0.5){Animal Conventions}; % name for first point
-		 \node at (axis cs: 0.5, 0.5){Human Social Institutions}; % name for second point
-	\end{axis}
-\end{tikzpicture}
-
 Essentially, social institutions are norm-driven conventions that require cognitive capacities which make recognition, complying to and changing of social norms possible. Two questions arise:
 
 - if institutions are evolved 'animal conventions', how do the latter evolve themselves?
 - do simple 'animal conventions' and social institutions evolve by the same evolutionary mechanism?
 
-### Emergence of animal conventions
+## Emergence of functional and arbitrary conventions
 
 "Animal conventions" are behavioral regularities, where animals "know" how to behave. But how do they "know" that and how these regularities were established in the first place? @baraghith2019 compares game-theoretic and teleosemantic views on emergence of conventions as public meaning. His main claim is that theories of Skyrms [-@skyrms2010] and Millikan [-@millikan1987] share many aspects and can be synthesized to yield empirically testable and philosophically elaborated approach.
 
@@ -138,26 +119,97 @@ It means that if state $\sigma_i$ occurs with prior probabilities $P(\sigma_i)$ 
 However, it is not sufficient for evolutionary account of human social coordination resulting in social institutions.
 
 Another important formal approach to the emergence of conventions is due to Harms [-@harms2004]. He synthesizes sender-receiver framework and Millikan's teleosemantics. According to this approach, any semantic convention, or “rule”, is a “function-stabilizing mechanism”. It helps to coordinate the behavior of different organisms or different parts of an organism to perform an evolutionary adapted biological function. Rules are sets of maps from conditions to processes one by one. They say what to happen next given a state of the world. Rules for evolutionary adapted traits (AT) might be expressed as
-$$R_{AT}={\{\langle c_{i,}p_{i}\rangle} \mid AT \space sel \space p_{i}\space in \space c_i\}$$
-A rule for an adaptive trait is a set of all ordered pairs of a condition and a process such that the trait was selected for performing the process $p_i$ in the conditions $c_i$. [@harms2004, 203].
+$$R_{AT}={\{\langle c_{i,}p_{i}\rangle} \mid AT \space \text{sel} \space p_{i}\space \text{in} \space c_i\}$$
+A rule for an adaptive trait is a set of all ordered pairs of a condition and a process such that the trait was selected for performing the process $p_i$ in the conditions $c_i$. [@harms2004, 203]. Since any signaling system consists of states, signals and acts, both signals and acts are adaptive. It means that a convention contains at least two rules: 
 
-
+- a rule of extension — it relates world states and signals by correspondence, has truth-value and is governed by a production mechanism $P$ in a signal sender; $$R(\text{extension})_{P} =  \{ \langle \sigma_{i}, m_{j} \rangle \mid P \space \text{sel} \space m_{j} \space \text{in} \space \sigma_{i} \}$$
+- a rule of intension — it relates signals and acts by causal processes of interpretation and is governed by a response mechanism in a signal receiver; $$R(\text{intension})_{C} =  \{ \langle m_{i}, \alpha_{j} \rangle \mid C \space \text{sel} \space \alpha_{j} \space \text{when} \space m_{i} \}$$
+Harms mentions a third rule, that of a signal production, but it is not relevant for us now:
+$$R(\text{production})_{P} =  \{ \langle stimulus_{i}, m_{j} \rangle \mid P \space \text{sel} \space m_{j} \space \text{to} \space stimulus_{i} \}$$
+Rules $R(\text{extension}_{P})$ and $R(\text{intension}_{C})$ can be said to comprise a convention as a functional behavioral regularity, for both messages and acts are adapted — the former to world states and the latter to messages. But is it sufficient to define an animal convention?
 
 It has been observed that animal signals not only inform about the world states, but also direct the behavior of others. For example, alarm calls of vervet monkeys both convey “Look, there is a leopard!” and “Run up the nearest tree” [@seyfarth1990; @baraghith2019]. Harms calls this “primitive content” that has both indicative and imperative functions [@harms2004, 189]. Millikan calls it “pushmi-pullyu” representation and notes that purely descriptive and directive representations require a more advanced cognitive process than primitives [@millikan2005, 166].
 
-Evolutionary development of primitive content leads to the divergence of its descriptive and directive functions due to advanced cognitive capacities. As Harms suggest, it introduces a stabilizing, or regulatory mechanism $SM$ that works “atop” of conventions as rules for adaptive traits and guides behavior in case of failure of $R_{AT}$. It employs a corrective signal $CS = \{cs_{1}, ...,cs_n\}$ to "enforce" the initial convention when a signal is not sent in the presence of a world state it was selected for:
-$$R_{SM}={\{\langle \sigma_{i} \wedge \neg m_{j} \space where \space \space \langle \sigma_{i,}m_{j}\rangle} \in R_{AT} \rangle\mid SM \space sel \space cs \space when \quad (\sigma_{i} \wedge \neg m_{j})\}$$
+*Evolutionary development of primitive content leads to the divergence of its descriptive and directive functions due to advanced cognitive capacities*. As Harms suggest, it introduces a stabilizing, or regulatory mechanism $SM$ that works “atop” of conventions as rules for adaptive traits and guides behavior in case of failure of $R_{AT}$. It employs a corrective signal $CS = \{cs_{1}, ...,cs_n\}$ to "enforce" the initial convention when a signal is not sent in the presence of a world state it was selected for:
+$$R_{SM}={\{\langle \sigma_{i} \wedge \neg m_{j} \space \text{where} \space \space \langle \sigma_{i,}m_{j}\rangle} \in R_{AT} \rangle\mid SM \space \text{sel} \space cs \space \text{when} \space (\sigma_{i} \wedge \neg m_{j})\}$$
 The rule for a stabilizing mechanism is a set of ordered pairs consisting of the failure of an adaptive trait and a corresponding corrective signal. If the adaptive trait fails, the stabilizing mechanism will detect this failure and send a corrective signal/action to restore it[^7]. This division is echoed in Millikan's work as first-order and higher-order reproductive families [@millikan1987, 23]. According to it, conventions $R_{AT}$ are first-order and stabilizing mechanisms $R_{SM}$ are second-order reproductive families that serve the same goal of restoring a first-order proper function.
 
-It is tempting to say that on an O'Connor's "convention—social norm" continuum, $R_{AT}$ is closer to conventions and $R_{SM}$  is to norms, but in Harms conventions *are* function-stabilizing mechanisms containing normative component by definition: $$\text{convention} = \langle R_{AT}, R_{SM} \rangle$$If a functional convention has normativity by default, and if institutions are norm-driven behavioral regularities, how do they differ from "animal conventions"? According to Guala and Hindriks, the difference is in scope of actionable signals. Animals have a more limited set of actionable signals than humans, as their behavior is tightly coupled to the stimuli by genetic wiring. In game-theoretic terms, for a signaling system is an ESS, it is disadvantageous for agents to deviate from the signal-act coupling. However, as @sterelny2003 suggests, humans and other complex creatures have the ability to decouple stimulus and behavioral response with representations of environment. This, in theory, allows for invention and following different rules for the same signal. But how is this decoupling is possible, and does it affect the transition from "animal conventions" to social institutions?
+It is tempting to say that on an O'Connor's "convention—social norm" continuum, $R_{AT}$ is closer to conventions and $R_{SM}$  is to norms, but in Harms conventions *are* function-stabilizing mechanisms containing normative component by definition. Hence, it means that convention contains both adaptive rules—for extension and intension—and their stabilizing mechanisms: $$\text{convention} = \{ R(\text{ex})_{P}, \quad R(\text{in})_{C},\quad R_{SM} \}$$$$\text{s.t.} \space (P \space sel \space m_{j} \space \text{in}\space \sigma_{i}) \space \wedge \space (C \space sel \space \alpha_{j} \space \text{when} \space m_{i}) \space \wedge \space (SM \space sel \space cs \space \text{when} \space (\sigma_{i} \wedge \neg m_{j}) \}$$Thus, if a functional convention has normativity by default, and if institutions are norm-driven behavioral regularities, how do they differ from "animal conventions"? According to Guala and Hindriks, the difference is in scope of actionable signals. Animals have a more limited set of actionable signals than humans, as their behavior is tightly coupled to the stimuli by genetic wiring. In game-theoretic terms, for a signaling system is an ESS, it is disadvantageous for agents to deviate from the signal-act coupling. However, as @sterelny2003 suggests, humans and other complex creatures have the ability to decouple stimulus and behavioral response with representations of environment. This, in theory, allows for invention and following different rules for the same signal. In formal terms it allows for several interpretations:
 
-In O'Connor's terms, the transition from narrow set of actionable signals to the wider one is that from functional to arbitrary conventions. It means that behavioral regularities "might have been otherwise", just like Guala and Hindriks propose. However, the game-theoretic implications of this are unclear, and several questions arise:
+1. the cardinality of all the sets $\lvert R(\text{ex})_{P} \rvert$, $\lvert R(\text{in})_{C}\rvert$ and $\lvert R_{SM}\rvert$ is increased, which means that the capacity for richer behavioral response is dependent on the capacity to represent more world states, as Godfrey-Smith and Planer suggest [-@godfrey-smith2014; -@planer-godfrey2021]. It would imply that a convention is rich and complex and has many state-signal-act combinations as well as many stabilizing mechanisms restoring the function of these compinations;
+```mermaid
+graph LR;
+w1(State 1)-->s1(Signal 1)-->a1(Act1)
+w2(State 2)-->s2(Signal 2)-->a2(Act2)
+```
+2. the cardinality of only the intension rule $\lvert R(\text{in})_{C} \rvert$ is increased, meaning that the same set of world states can cause to produce different signals and acts. However, it is not clear what ensures the discrimination of states and successful production of different signals. Moreover, this configuration destroys the ordered pair structure of convention rendering it not functional anymore in the sense established earlier:
+  ```mermaid
+  graph LR;
+  w1(State 1)--?-->s1(Signal 1)-->a1(Act1)
+  w1(State 1)--?-->s2(Signal 2)-->a3(Act2)
+  w1(State 1)--?-->s3(Signal 3)-->a4(Act3)
+  ```
+3. only the number of possible acts increases, hence the ordered pair structure of convention is displaced. This configuration is not functional, as well:
+  ```mermaid
+  graph LR;
+ 
+	  w1(State 1)-->s1(Signal 1)
+	  s1--?-->a1(Act1)
+	  s1--?-->a2(Act 2)
+	  s1--?-->a3(Act 3)
+	  %%r1<-.Representation.->w1%%
+	  %%r1-->a2(Act2)%%
+ 
+  ```
+How to decouple stimuli as signals from behavioral responses as acts and preserve the structure of convention as a set of functional rules for extension, intension and stabilization?  It leaves us with a tradeoff: 
+
+- either convention is indeed functional, but there is no "proper decoupling", for there are just more ordered pairs of state-signal and signal-act;
+- or human convention is not functional, and "proper decoupling" occurs by breaking the one-to-one mapping from signals to acts.
+
+In O'Connor's terms, the transition from narrow set of actionable signals to the wider one is that from functional to arbitrary conventions. It means that the behavioral regularities "might have been otherwise", just like Guala and Hindriks propose. However, the game-theoretic implications of this are unclear, and several questions arise:
 
 - do social norms as expectations evolve due to an increased degree of arbitrariness in conventions?
 - what introduces arbitrariness into functional conventions? If, according to Guala and Hindriks, representations of environment are key differentiator for a wider set of actionable signals, are they what introduces arbitrariness?
-- how does representation of environment itself evolve? 
+- although not a game-theoretic question, but how does representation of environment itself evolve? 
 
 In other words, we need to study the relationship between the two axes of "convention space" built upon O'Connor's two distinctions. 
+
+\begin{tikzpicture}
+	\begin{axis}[
+		title={},
+		xlabel={},
+		ylabel={},
+		xmin=-1, xmax=1,
+		ymin=-1, ymax=1,
+		xtick={1}, xticklabels={Necessary, Arbitrary}, % Sets the tick labels from bottom to top
+		ytick={1}, yticklabels={Genetically Inherited, Culturally Inherited}, % Sets the tick labels from left to right
+		]
+		 \addplot[only marks,mark size=3pt] coordinates {(-0.5, -0.5) (0.5, 0.5)}; % plot points
+		 \addplot[mark=0,fill opacity=0.3] coordinates {(1,1) (2,2)}; % fill the area between points with opacity
+		 \addplot[blue] coordinates {(1,0) (1,2)}; % vertical line from bottom to top
+		 \addplot[blue] coordinates {(0,1) (2,1)}; % horizontal line from left to right
+		 \node at (axis cs: -0.5,-0.5){Animal Conventions}; % name for first point
+		 \node at (axis cs: 0.5, 0.5){Human Social Institutions}; % name for second point
+	\end{axis}
+	\begin{axis}[
+	title={},
+	xlabel={},
+	ylabel={},
+	xmin=-1, xmax=1,
+	ymin=-1, ymax=1,
+	xtick={1}, xticklabels={Necessary, Arbitrary}, % Sets the tick labels from bottom to top
+	ytick={1}, yticklabels={Genetically Inherited, Culturally Inherited}, % Sets the tick labels from left to right
+	]
+	 \addplot[only marks,mark size=3pt] coordinates {(-0.5, -0.5) (0.5, 0.5)}; % plot points
+	 \addplot[mark=0,fill opacity=0.3] coordinates {(1,1) (2,2)}; % fill the area between points with opacity
+	 \addplot[blue] coordinates {(1,0) (1,2)}; % vertical line from bottom to top
+	 \addplot[blue] coordinates {(0,1) (2,1)}; % horizontal line from left to right
+	 \node at (axis cs: -0.5,-0.5){Animal Conventions}; % name for first point
+	 \node at (axis cs: 0.5, 0.5){Human Social Institutions}; % name for second point
+\end{axis}
+\end{tikzpicture}
+
+O'Connor herself proposes a way to measure the degree of arbitrariness in conventions [-@oconnor2021]. 
 
 ## Correlation and asymmetry of strategies
 So far, we have established that conventions as "function-stabilizing mechanisms" might evolve from repeated signaling games and that it is possible to measure their arbitrariness. The next important question is what kind of equilibrium a convention is if it of evolutionary origin? 
