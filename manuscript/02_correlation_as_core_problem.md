@@ -4,19 +4,21 @@ author: Valerii Shevchenko
 affiliation: HSE University
 abstract: 
 keywords: Social ontology, evolutionary game theory
+header-includes:
+  - \usepackage{pgfplots}
 ---
 
 # Evolutionary stable correlation as a core problem of social ontology
 
 ## Introduction
-In this paper, I argue that the emergence of evolutionary stable correlation is the core issue of naturalistic social ontology. According to rules-in-equilibria theory, social institutions are the central unit of social ontology [@guala2016b], and coordination is its main mechanism rooted in evolution [@shevchenko2023]. As institutions are normatively-driven self-sustaining behavioral regularities designed to solve coordination problems [@aoki2007], they share many features with 'animal conventions' that help animals solve coordination problems and maintain stable relationships [@hindriks2015]. Consequently, understanding the emergence of social institutions requires an examination of the evolutionary mechanisms that enable correlation of strategies with normative force as a key characteristic.
+In this paper, I argue that the emergence of evolutionary stable correlation is the core issue of naturalistic social ontology. According to rules-in-equilibria theory, social institutions are the central unit of social ontology [@guala2016b], and coordination is its main mechanism rooted in evolution [@shevchenko2023]. As institutions are normatively-driven self-sustaining behavioral regularities designed to solve coordination problems [@lewis2008; @aoki2007], they share many features with 'animal conventions' that help animals solve coordination problems and maintain stable relationships [@hindriks2015]. Consequently, understanding the emergence of social institutions requires an examination of the evolutionary mechanisms that enable correlation of strategies with normative force as a key characteristic.
 
 To expand, let us first look at Guala's [-@guala2016b] argument that has the following logic:
 
 1. social institutions are backed not by constitutive rules of the form "X counts as Y in (the context of) C", like in Searle [-@searle1995],[^1] but by regulative rules of the form "do X if Y"
 2. from a game-theoretic point of view, regulative rules can be seen as agents' strategies that comprise a *correlated equilibrium*[^2]
 3. constitutive rules are linguistically transformed regulative rules with added theoretical term that represents a certain equilibrium
-4. at the same time, many animal species including baboons, lions, swallowtails, and others exhibit behavioral patterns describable in the form of correlated equilibrium, as well [@maynardsmith1982]
+4. at the same time, many animal species including baboons, lions, swallowtails, and others exhibit behavioral patterns describable in the form similar to correlated equilibrium [@maynardsmith1982]
 5. despite the similarity of mathematical representation, the cases of 'animal conventions' and human social institutions differ in scope of actionable signals. Building on Sterelny [-@sterelny2003], Guala puts for forward an idea that humans can invent and follow new rules, whereas animals are bound to genetically inherited sets of behavioral responses
 6. the arbitrariness of rules that humans can invent and follow is grounded in and ontologically depends on shared representations of a given community
 7. put differently, the difference in scope of actionable signals between animals and humans can be explained by humans having social epistemology that grounds social ontology.
@@ -48,208 +50,234 @@ Taking into account the wealth of research on transition from ESS to correlation
 
 It is relevant, for if social institutions have emerged from 'animal conventions' with the aid of cognitive capacities like mindreading and/or mindshaping [@zawidzki2013], it constrains social ontology as the scope of possible objects of study to the logical derivatives of social institutions and social coordination in general as discussed in @shevchenko2023.
 
-This paper is structured as follows. First, it discusses the relationship between social institutions, conventions, and norms, and how conventions emerge in Skyrms's dynamics and Harms's evolutionary functionalism. Second, it examines the correlation and asymmetry of strategies in the emergence of social institutions. Third, the paper explores the source of randomization in correlation as the problem in social institutions as evolved correlated equilibria. We will analyze Guala's argument about the difference in scope of actionable signals in animals versus humans and Skyrms's interpretation of Maynard Smith's “bourgeois” concept. Fourth, it delves into the tension between bourgeois and correlated equilibria with a formal distinction between mixed-strategy and correlated equilibria.
+This paper is structured as follows. ***First, it discusses the relationship between social institutions, conventions, and norms, and how conventions emerge in Skyrms's dynamics and Harms's evolutionary functionalism.*** Second, it examines the correlation and asymmetry of strategies in the emergence of social institutions. Third, the paper explores the source of randomization in correlation as the problem in social institutions as evolved correlated equilibria. We will analyze Guala's argument about the difference in scope of actionable signals in animals versus humans and Skyrms's interpretation of Maynard Smith's “bourgeois” concept. Fourth, it delves into the tension between bourgeois and correlated equilibria with a formal distinction between mixed-strategy and correlated equilibria.
 
-Let us start with the notion of social institutions, destructure it into norms and conventions, study their relations and gradually arrive at the issue of coordination either by correlation or by asymmetry of strategies. 
+Let us start with the notion of social institutions, destructure it into norms and conventions, study their relations and gradually arrive at the issue of coordination either by correlation or by asymmetry of strategies.
 
-## Institutions vs. norms vs. conventions
-According to @guala2016b, institutions are rules-in-equilibria, normatively-driven behavioral regularities represented as correlated equilibria. “Rules” here are the recipes guiding and prescribing certain behavior and are *used by the agents themselves*, and ”equilibria” are objective stable states of the strategic interaction between agents and population thereof. Other scholars pinpoint normative and self-sustaining nature of institutions. They are "humanly devised constraints that shape human interactions" [@north1990], "norm-governed social practices" [@tuomela2013] and "self-sustaining salient behavioral patterns" [@aoki2007]. It can be seen that institutions combine "subjective" and "objective" components: they are driven by social norms, that might vary from one population to another, and, at the same time, constrain possible actions and sustain itself.
+## 1. Social institutions as rules-in-equilibria
+@hindriks2015 present a unified theory of social institutions as rules in equilibria represented symbolically by theoretical terms like "money" or "marriage". It bridges accounts of regulative rules, equlibria of strategic games and constitutive rules, where the former two are complementary and comprise a rules-in-equilibria account, and the latter supplements it by providing a symbolic representation.
 
-If social norms are inherently important to institutions, what are they, and how do they differ from social institutions? According to @bicchieri2005, social norms are shared expectations, or "rules", about how people should behave in a given context. These expectations can be either prescriptive, telling individuals what they ought to do, or descriptive, reflecting what most people actually do. Social norms can be modeled as a set of rules or constraints that guide individual behavior. For example, let $X$ be the set of all possible behaviors that an individual can choose from in a given situation. A social norm $N$ can then be represented as a subset of $X$ that specifies which behaviors are considered acceptable or desirable by the group: $N \subseteq X$. The power of social norms lies in their ability to shape behavior without the need for formal enforcement mechanisms like laws or explicit regulations. Individuals often conform to social norms because they want to fit in and be accepted by their peers, or because they believe that following the norm is the right thing to do. Thus, norms are shared expectations about behavior in certain situations and institutions are behavioral patterns that are governed by such shared expectations.
+The rule-based account conceives of social institutions as rules guiding and constraining behavior in social interaction or "humanly devised constraints" of social interactions [@north1990]. In sociology, the tradition of treating institutions as rules dates back to such classical figures as [@weber1924] and [@parsons2015], and it continues to thrive today. The equlibrium-based account sees institutions as behavioral regularities and, most importantly, solutions to coordination problems. The constitutive rules account sees institutions as systems assigning statuses and functions to physical entities [@searle1995].
 
-The further required distinction to be made is that of institutions, norms, and conventions. But what are conventions in the first place? @lewis2008 defines conventions as regularities in behavior that are mutually expected and mutually beneficial for the agents involved. In other words, conventions are shared expectations about behavior that result in cooperative outcomes. To illustrate this concept, Lewis uses the example of driving on the right or left side of the road. This convention is mutually expected because everyone understands that it is necessary for traffic to flow smoothly and avoid accidents. It is also mutually beneficial because if everyone follows the convention, then there is a reduced risk of accidents and delays. Lewis also distinguishes between two types of conventions: coordination conventions and strategic conventions. Coordination conventions are those where agents need to coordinate their actions to achieve a common goal, such as deciding which side of the road to drive on. Strategic conventions are those where agents need to make strategic choices based on what they expect others to do, such as deciding whether to use a turn signal while driving.
+According to the authors, the rule-based account is insufficient, for it cannot explain why some rules are followed and others not. To address this issue, an equilibrium account is needed to show the strategic character of rule-following.
 
-For example, consider the following coordination game:
+Hindriks and Guala illustrate this point by comparing the two paradigmatic games from game theory, which are prisoner's dilemma and stag hunt. Although mutual defection in the prisoner's dilemma is a Nash equlibrium,[^4] it is not a social institution, however, for it is not self-sustaining due to independence of players' strategies. In contrast, the mutual decision to hunt a stag instead of a hare, which are also both Nash equilibria, is an institution, for it requires correlation of players' strategies to achieve a bigger joint payoff. The latter means that the strategy is salient and beneficial for players, what explains why some rules are followed and other not.
+
+%%\begin{figure}[htb]
+\centering
+\begin{table}{2}{2}
+& $C$ & $D$\\
+$C$ &$-1,-1$ &$-3,0$\\
+$D$ &$0,-3$ &$-2,-2$
+\end{table}\hspace*{10mm}%
+\begin{table}{2}{2}
+& $S$ & $H$\\
+$S$ &$4,4$ &$1,3$\\
+$H$ &$3,1$ &$2,2$
+\end{table}\hspace*{2.5mm}%
+\caption{Prisoner's dilemma (left) and stag hunt (right)}
+\end{figure}%%
 
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
-& Drive on left & Drive on right \\
+& $C$ & $D$ \\
 \hline
-Drive on left & (1,1) & (-1,-1) \\
+$C$ & $-1,-1$ & $-3,-0$\\
 \hline
-Drive on right & (-1,-1) & (1,1) \\
+$D$ & $0,-3$ & $-2,-2$ \\
 \hline
 \end{tabular}
+\caption{Prisoner's dilemma (left) and stag hunt (right)}
 \end{center}
 
-In this game, two drivers must choose whether to drive on the left or right side of the road. The payoffs indicate how well each driver does depending on their choice and their partner's choice. If both drivers choose the same side (either both drive on the left or both drive on the right), they each receive a payoff of $1$. If they choose different sides (one drives on the left while the other drives on the right), they each receive a payoff of $-1$. This game has two pure strategy Nash equilibria:[^4] both drivers driving on the left or both driving on the right. In other words, if both drivers follow these conventions, they will achieve a mutually beneficial outcome. Lewis argues that conventions can emerge in situations like this through repeated interactions between agents who learn to coordinate their behavior over time. As more people adopt a particular convention, it becomes more costly for others to deviate from it because they risk being penalized by their partners.
+However, the notion of players' correlated strategies as an explanans of the stability of institutions is insufficient, as the authors point out, for it is too loose. The authors provide an example of non-human animals solving coordination problems but still not having institutions. For example, male baboons, lions, swallowtails and some other species exhibit a recurring behavioral pattern that can be described in terms of correlated equilibrium. Males patrol an area to mate with females and have ritual fights with intruders if encountered. The evolved pair of players' strategies minimizes possible damage to both parties and lets the incumbent occupy territory and mate [@smith1982]. The authors use Maynard Smith's exposition of animal territorial behavior represented as a “Hawk-dove-bourgeois” game to provide an example of a prototypical social institution:
 
-If conventions are mutually expected and mutually beneficial behavioral regularities, how are they different from both social norms and social institutions? O'Connor (2019) draws two crucial distinctions, namely between conventions and social norms, and between functional and arbitrary conventions. The former distinction implies that not all behavioral regularities possess normative force, meaning that conventions and norms are not the same. For instance, friends may have a convention of meeting every Friday evening at a bar, and failing to show up does not necessarily imply a violation of a norm. However, when two cars are driving in the same direction towards each other on the same side of the road, the drivers are compelled to swerve to avoid collision. Failing to do so may result in fines or even accidents; hence, swerving becomes an obligatory normative action.
+%%\begin{figure}[htb]
+\centering
+\begin{table}{3}{3}
+& $H$ & $D$ & $B$\\
+$H$ &$-1$ &$2$ &$0.5$\\
+$D$ &$0$ &$1$ &$0.5$ \\
+$B$ &$-0.5$ &$1.5$ &$1.0$
+\end{table}
+\caption{Hawk-Dove-Bourgeois game}
+\end{figure}%%
 
-Furthermore, as Bicchieri (2005) asserts, conventions differ from social norms in their association with self-interest and common interest. While they converge with self-interest, they do not necessarily coincide with common interest. In the case of friends gathering at a bar, there is minimal or no tension between self-interest and common interest; however, when driving cars on the road, there is an inherent tension between these interests. O'Connor notes that conventions and norms exist along a continuum, where conventions can acquire normative force based on their position on this spectrum.
+Presented with a terrestrial resource, a “Hawk” player fights over it, a “Dove” retreats and “Bourgeois” uses a strategy “fight if own and retreat if do not own”. In this game, Guala and Hindriks see the “bourgeois” strategy “fight of own” as a correlated one, meaning that players coordinate their actions by conditioning them on an external signal. As they say, its is a "simple pre-emption device: whoever occupied the land first has the right to use it" [@hindriks2015, 465]. In this case, the temporal order of occupation is used as correlation device. Overall, this correlation fulfills the necessary condition of being an institution.
 
-The second distinction pertains to the arbitrary and historically contingent nature of conventions, with the recognition that they are subject to variation and could have been otherwise. This arbitrariness is a fundamental characteristic of conventions, as posited by Lewis. However, @gilbert1992 has critiqued Lewis's work, noting that not all potential resolutions to a coordination problem offer equal benefits for participants. Hence, where one mode of coordination is more desirable than another, conventionality is not entirely arbitrary. To put it differently, arbitrariness in the context of conventions illustrates a continuum ranging from necessity to contingency. For example, signaling among vervet monkeys may be construed as a convention in the Lewisian sense of recurrent behavioral patterns resolving coordination problems [cf. @harms2004; @skyrms2010]. Nevertheless, this conventionality is not historically contingent insofar as multiple solutions are equally remunerative since adaptive dynamics breaks the symmetry between equilibria. Agents may be genetically predisposed towards certain strategies. Some conventions are more functional and others are more arbitrary.
+@guala2015 illustrate the applicability of HDB to humans with a game where two tribes, spatially separated by a dry river, graze their cattle. The dry river serves as a “focal point”—a salient feature of the environment that the members of both tribes have been aware of [@schelling1980]. It also serves as a correlation device, for it is a source of a public signal that coordinated actions of different tribes without their explicit agreement. Thus, the shepherds of both tribes have three possible strategies: “Graze”, “Not graze” and “Graze if North / South of the river”. The members of one tribe might be killed by the members of another if grazing their cattle on another side of the dry river. The most stable set of strategies is grazing, if on the known side of the dry river. However, this is insufficient, for the payoff structure of the game is uniform for animal and human cases. Hence, we cannot discriminate between them solely on this basis.
 
-Putting this into a perspective:
+%%\begin{figure}[htb]
+\centering
+\begin{table}{3}{3}
+& $G$ & $NG$ & $GI$\\
+$G$ &$-1$ &$2$ &$0.5$\\
+$NG$ &$0$ &$1$ &$0.5$ \\
+$GI$ &$-0.5$ &$1.5$ &$1.0$
+\end{table}
+\caption{Grazing game}
+\end{figure}%%
 
-- 'animal conventions' are more functional conventions where "normativity", if exists, is grounded in genetically inherited behavioral predispositions;
-- social institutions are more arbitrary conventions where normativity is grounded in advanced cognitive capacities like mindreading.
+What, then, distinguishes animal conventions from human social institutions? Guala and Hidriks argue that animal conventions differ from human social institutions in the scope of actionable signals. Building on the work of @sterelny2003, they say that animals may only respond to a limited set of stimuli, but humans, with their ability to use representations and symbols to condition behavior, can decouple stimulus and response and invent new rules. For example, butterflies cannot coordinate on anything but who occupied the sunspot first and unable to create new equilibria. Humans, however, can go beyond this: establishing various correlations, devising new strategies, and expanding the number of equilibria.
 
-Essentially, social institutions are norm-driven conventions that require cognitive capacities which make recognition, complying to and changing of social norms possible. Two questions arise:
+There are two types of rules: agent-rules that agents formulate to represent and guide their behaviour and observer-rules that observer formulates to represent and summarize others' behaviour. Strategies can be described as rules, but a-rules influence behaviour and o-rules only describe it [@guala2016, 54].
 
-- if institutions are evolved 'animal conventions', how do the latter evolve themselves?
-- do simple 'animal conventions' and social institutions evolve by the same evolutionary mechanism?
+Institutions are composed of both subjective and objective components: they are determined by varying social norms as rules and simultaneously restrict certain behaviors and their own perpetuation. But how they are connected?
 
-## Emergence of functional and arbitrary conventions
+Guala and Hindriks argue that an adequate theory of institutions must have three explanatory components [@guala2015, 469]:
 
-"Animal conventions" are behavioral regularities, where animals "know" how to behave. But how do they "know" that and how these regularities were established in the first place? @baraghith2019 compares game-theoretic and teleosemantic views on emergence of conventions as public meaning. His main claim is that theories of Skyrms [-@skyrms2010] and Millikan [-@millikan1987] share many aspects and can be synthesized to yield empirically testable and philosophically elaborated approach.
+- coordination
+- correlation
+- representation.
 
-The author observes that signals, or public representations, become conventional by stabilization of a strategy profile in a Lewis signaling game, resulting in the emergence of behavioral regularities among involved agents. In other words, convention is generated by stabilization of a signaling system. According to Lewis, a signaling system is a *strict Nash equilibrium*[^5] of a signaling game.
+Following the logic of the authors, Institutions coordinate behavior by correlation of strategies, and humans are able to devise many strategies and equilibria given the same correlation device, or signal, due to an advanced cognitive capacity of conditioning behavior on representation of the environment. At the same time, as rules-in-equilibria theory has “rules” and "equilibria” parts, they must be somehow connected. For this reason, rules are symbolic representations of strategies in a game that comprise equilibria. They not only serve as symbolic markers of the properties of equilibria, but considerably save cognitive effort. As Aoki notes [-@aoki2007, 6]: “An institution is a self-sustaining, salient pattern of social interaction, as represented by meaningful rules that every agent knows, and incorporated as agents' shared beliefs about the ways the game is to be played”.
 
-One of the similarities in teleosemantic and signaling approaches is that evolution drives the emergence of successful coordination between agents, be it parts of an organism or different organisms. However, teleosemantic approach operates with the notion of *function* [@millikan1987], whereas sender-receiver approach emphasizes *adaptive dynamics* by reinforcement learning [@skyrms2010].
-
-In both approaches, conventions depend on their history and involve contingency. As Millikan [-@millikan2005, 29] puts it:
-
-> “A convention is merely a pattern of behavior that is (1) handed down from one person, pair, or group of persons to others – the pattern is reproduced – and (2) is such that, if *the pattern has a function*, then it is not the only pattern that might have served that function about as well. Thus, if a different precedent had been set instead, a different pattern of behavior would probably have been handed down instead.”
-
-As Baraghith notes, most criticism of teleosemantic view of the emergence of conventions has been that content—or representation of a world state by a sender—lacks explanation solely by its adaptive function or history. However, as Neander and Shea show, teleosemantics might solve the problem of mental content, intentionality, and thus, representation [@neander2008; @shea2018]. In its turn, sender-receiver approach has received criticism for being atomistic and not able to accommodate “mental life”—cases with agents having advanced cognitive capacities like midredaing [@sterelny2017].
-
-Baraghith stresses the crucial difference between speaker meaning and public meaning. A convention as a signaling system involves two kinds of information: a representation of an observed world state by a sender, and a signal sent from sender to receiver. The former is internal, and the latter is external. Representation and signal are mental and behavioral parts of a representational system, respectively.
-
-If a signaling system is a strategy profile of a signaling game, what is the latter? A signaling game represents a coordination problem between world states, signals and acts, which are associated probabilistically. The most simple case has two states $W=\{\sigma_{1,}\sigma_2\}$, two messages $M=\{m_{1,}m_2\}$ that a sender $S$ can transfer to a receiver $R$, and two acts $A=\{\alpha_1,\alpha_2\}$, by which $R$ can respond to a received signal. There are pure sender and receiver strategies. The former is a function $s: W\mapsto M$ from world states to signals, and the latter is a function $r: M \mapsto A$ from signals to acts. With two signals and two acts, both sender and receiver have 4 strategies each. Assuming that all strategies are equiprobable, 16 strategies are possible, from which only two are beneficial for both agents and constitute a strict NE.
-
-In an evolutionary perspective of Skyrms [-@skyrms2010], signaling systems are not strict Nash equilibria, but ESS. On this account, given an adaptive process that guides the behavior of agents, any signaling game iterated over time results in an ESS. Depending on initial conditions, population converges on one of the two signaling systems, what is often modeled with replicator dynamics.[^6]
-
-Another detail of this approach is its connection to information theory. A signal $m_1$ carries information if it changes probabilities of a world state. The information quantity is measured by how far the probability is moved, and information content—by direction of probability: increasing or decreasing. Franke and Wagner [-@franke2014] show the Bayesian likelihood of a world state $\sigma_i$ given a signal $m_j$: $$P(\sigma_i \mid m_j) = \frac{P(m_j \mid \sigma_i)\times{P(\sigma_i)}}{\sum_t P(m_j \mid \sigma_i)\times{P(\sigma_i)}}$$
-It means that if state $\sigma_i$ occurs with prior probabilities $P(\sigma_i)$ and $P(m_{j}\mid \sigma_i)>0$, signal $m_j$ is sent. Signals may initially contain no intrinsic meaning, and the dynamics does not require any sophisticated cognitive capacities of the agents. They do not need to have pre-existing mental language for a signaling system to be established [@skyrms2010, 7]. This makes sense in “animal conventions”, but not easily so in human ones. As Huttegger puts it in regard to human language [-@huttegger2007, 413]:
-
-> "There is at least one functional aspect of human languages that can fundamentally be expressed in terms of signaling systems: communication facilitates social coordination”.
-
-However, it is not sufficient for evolutionary account of human social coordination resulting in social institutions.
-
-Another important formal approach to the emergence of conventions is due to Harms [-@harms2004]. He synthesizes sender-receiver framework and Millikan's teleosemantics. According to this approach, any semantic convention, or “rule”, is a “function-stabilizing mechanism”. It helps to coordinate the behavior of different organisms or different parts of an organism to perform an evolutionary adapted biological function. Rules are sets of maps from conditions to processes one by one. They say what to happen next given a state of the world. Rules for evolutionary adapted traits (AT) might be expressed as
-$$R_{AT}={\{\langle c_{i,}p_{i}\rangle} \mid AT \space \text{sel} \space p_{i}\space \text{in} \space c_i\}$$
-A rule for an adaptive trait is a set of all ordered pairs of a condition and a process such that the trait was selected for performing the process $p_i$ in the conditions $c_i$. [@harms2004, 203]. Since any signaling system consists of states, signals and acts, both signals and acts are adaptive. It means that a convention contains at least two rules: 
-
-- a rule of extension — it relates world states and signals by correspondence, has truth-value and is governed by a production mechanism $P$ in a signal sender; $$R(\text{extension})_{P} =  \{ \langle \sigma_{i}, m_{j} \rangle \mid P \space \text{sel} \space m_{j} \space \text{in} \space \sigma_{i} \}$$
-- a rule of intension — it relates signals and acts by causal processes of interpretation and is governed by a response mechanism in a signal receiver; $$R(\text{intension})_{C} =  \{ \langle m_{i}, \alpha_{j} \rangle \mid C \space \text{sel} \space \alpha_{j} \space \text{when} \space m_{i} \}$$
-Harms mentions a third rule, that of a signal production, but it is not relevant for us now:
-$$R(\text{production})_{P} =  \{ \langle stimulus_{i}, m_{j} \rangle \mid P \space \text{sel} \space m_{j} \space \text{to} \space stimulus_{i} \}$$
-Rules $R(\text{extension}_{P})$ and $R(\text{intension}_{C})$ can be said to comprise a convention as a functional behavioral regularity, for both messages and acts are adapted — the former to world states and the latter to messages. But is it sufficient to define an animal convention?
-
-It has been observed that animal signals not only inform about the world states, but also direct the behavior of others. For example, alarm calls of vervet monkeys both convey “Look, there is a leopard!” and “Run up the nearest tree” [@seyfarth1990; @baraghith2019]. Harms calls this “primitive content” that has both indicative and imperative functions [@harms2004, 189]. Millikan calls it “pushmi-pullyu” representation and notes that purely descriptive and directive representations require a more advanced cognitive process than primitives [@millikan2005, 166].
-
-*Evolutionary development of primitive content leads to the divergence of its descriptive and directive functions due to advanced cognitive capacities*. As Harms suggest, it introduces a stabilizing, or regulatory mechanism $SM$ that works “atop” of conventions as rules for adaptive traits and guides behavior in case of failure of $R_{AT}$. It employs a corrective signal $CS = \{cs_{1}, ...,cs_n\}$ to "enforce" the initial convention when a signal is not sent in the presence of a world state it was selected for:
-$$R_{SM}={\{\langle \sigma_{i} \wedge \neg m_{j} \space \text{where} \space \space \langle \sigma_{i,}m_{j}\rangle} \in R_{AT} \rangle\mid SM \space \text{sel} \space cs \space \text{when} \space (\sigma_{i} \wedge \neg m_{j})\}$$
-The rule for a stabilizing mechanism is a set of ordered pairs consisting of the failure of an adaptive trait and a corresponding corrective signal. If the adaptive trait fails, the stabilizing mechanism will detect this failure and send a corrective signal/action to restore it[^7]. This division is echoed in Millikan's work as first-order and higher-order reproductive families [@millikan1987, 23]. According to it, conventions $R_{AT}$ are first-order and stabilizing mechanisms $R_{SM}$ are second-order reproductive families that serve the same goal of restoring a first-order proper function.
-
-It is tempting to say that on an O'Connor's "convention—social norm" continuum, $R_{AT}$ is closer to conventions and $R_{SM}$  is to norms, but in Harms conventions *are* function-stabilizing mechanisms containing normative component by definition. Hence, it means that convention contains both adaptive rules—for extension and intension—and their stabilizing mechanisms: $$\text{convention} = \{ R(\text{ex})_{P}, \quad R(\text{in})_{C},\quad R_{SM} \}$$$$\text{s.t.} \space (P \space sel \space m_{j} \space \text{in}\space \sigma_{i}) \space \wedge \space (C \space sel \space \alpha_{j} \space \text{when} \space m_{i}) \space \wedge \space (SM \space sel \space cs \space \text{when} \space (\sigma_{i} \wedge \neg m_{j}) \}$$Thus, if a functional convention has normativity by default, and if institutions are norm-driven behavioral regularities, how do they differ from "animal conventions"? According to Guala and Hindriks, the difference is in scope of actionable signals. Animals have a more limited set of actionable signals than humans, as their behavior is tightly coupled to the stimuli by genetic wiring. In game-theoretic terms, for a signaling system is an ESS, it is disadvantageous for agents to deviate from the signal-act coupling. However, as @sterelny2003 suggests, humans and other complex creatures have the ability to decouple stimulus and behavioral response with representations of environment. This, in theory, allows for invention and following different rules for the same signal. In formal terms it allows for several interpretations:
-
-1. the cardinality of all the sets $\lvert R(\text{ex})_{P} \rvert$, $\lvert R(\text{in})_{C}\rvert$ and $\lvert R_{SM}\rvert$ is increased, which means that the capacity for richer behavioral response is dependent on the capacity to represent more world states, as Godfrey-Smith and Planer suggest [-@godfrey-smith2014; -@planer-godfrey2021]. It would imply that a convention is rich and complex and has many state-signal-act combinations as well as many stabilizing mechanisms restoring the function of these compinations;
-```mermaid
+```{.mermaid background=transparent format=svg}
 graph LR;
-w1(State 1)-->s1(Signal 1)-->a1(Act1)
-w2(State 2)-->s2(Signal 2)-->a2(Act2)
+	subgraph Objective
+		3(Observer rules)
+		1(Correlated equilibrium)
+		1<-.->3
+	end
+	subgraph Subjective
+		3<-.Representation.->4
+	end
+	4(Agent rules)
 ```
-2. the cardinality of only the intension rule $\lvert R(\text{in})_{C} \rvert$ is increased, meaning that the same set of world states can cause to produce different signals and acts. However, it is not clear what ensures the discrimination of states and successful production of different signals. Moreover, this configuration destroys the ordered pair structure of convention rendering it not functional anymore in the sense established earlier:
-  ```mermaid
-  graph LR;
-  w1(State 1)--?-->s1(Signal 1)-->a1(Act1)
-  w1(State 1)--?-->s2(Signal 2)-->a3(Act2)
-  w1(State 1)--?-->s3(Signal 3)-->a4(Act3)
-  ```
-3. only the number of possible acts increases, hence the ordered pair structure of convention is displaced. This configuration is not functional, as well:
-  ```mermaid
-  graph LR;
- 
-	  w1(State 1)-->s1(Signal 1)
-	  s1--?-->a1(Act1)
-	  s1--?-->a2(Act 2)
-	  s1--?-->a3(Act 3)
-	  %%r1<-.Representation.->w1%%
-	  %%r1-->a2(Act2)%%
- 
-  ```
-How to decouple stimuli as signals from behavioral responses as acts and preserve the structure of convention as a set of functional rules for extension, intension and stabilization?  It leaves us with a tradeoff: 
 
-- either convention is indeed functional, but there is no "proper decoupling", for there are just more ordered pairs of state-signal and signal-act;
-- or human convention is not functional, and "proper decoupling" occurs by breaking the one-to-one mapping from signals to acts.
+However, it is not evident how exactly rules represent strategies. To clarify this issue, the authors, drawing on @hindriks2005, propose to bridge their rules-in-equilbria account of institutions with the constitutive rules account. The latter presents institutions as systems of statuses and functions, paradigmatically proposed by @searle1995 as the formula "X counts as Y in C”. Searle draws a sharp distinction between constitutive and regulative rules, emphasizing the difference in their syntax, for that of the latter is “do X if Y”.
 
-In O'Connor's terms, the transition from narrow set of actionable signals to the wider one is that from functional to arbitrary conventions. It means that the behavioral regularities "might have been otherwise", just like Guala and Hindriks propose. However, the game-theoretic implications of this are unclear, and several questions arise:
+The constitutive rules approach argues that our beliefs are essential for the existence of institutions, which involve more than just actions. This applies to objects, persons, and events too—for example, “Bills issued by the Bureau of Engraving and Printing count as money in the United States” [@searle1995, 28]. X can be replaced by predicates that refer to any ontological category [@guala2015, 470].
 
-- do social norms as expectations evolve due to an increased degree of arbitrariness in conventions?
-- what introduces arbitrariness into functional conventions? If, according to Guala and Hindriks, representations of environment are key differentiator for a wider set of actionable signals, are they what introduces arbitrariness?
-- although not a game-theoretic question, but how does representation of environment itself evolve? 
+As the authors note, constitutive rules are linguistically transformed regulative rules, aided with a new term to name an institution. Combining these accounts enables researchers to investigate Y terms like “money” used by individuals in everyday life and analyze their internal regulative and strategic character, thus bridging explicit ontology of social science and implicit ontology of ordinary language. The main idea of this argiment, thus, is that constitutive rules can be developed at will from regulative rules or game-theoretic strategies by introducing institutional terms [@guala2015, 477].
 
-In other words, we need to study the relationship between the two axes of "convention space" built upon O'Connor's two distinctions. 
+$$\text{Regulative rules} \, + \, \text{Institutional terms}= \text{Constitutive rules}$$
 
-\begin{tikzpicture}
-	\begin{axis}[
-		title={},
-		xlabel={},
-		ylabel={},
-		xmin=-1, xmax=1,
-		ymin=-1, ymax=1,
-		xtick={1}, xticklabels={Necessary, Arbitrary}, % Sets the tick labels from bottom to top
-		ytick={1}, yticklabels={Genetically Inherited, Culturally Inherited}, % Sets the tick labels from left to right
-		]
-		 \addplot[only marks,mark size=3pt] coordinates {(-0.5, -0.5) (0.5, 0.5)}; % plot points
-		 \addplot[mark=0,fill opacity=0.3] coordinates {(1,1) (2,2)}; % fill the area between points with opacity
-		 \addplot[blue] coordinates {(1,0) (1,2)}; % vertical line from bottom to top
-		 \addplot[blue] coordinates {(0,1) (2,1)}; % horizontal line from left to right
-		 \node at (axis cs: -0.5,-0.5){Animal Conventions}; % name for first point
-		 \node at (axis cs: 0.5, 0.5){Human Social Institutions}; % name for second point
-	\end{axis}
-	\begin{axis}[
-	title={},
-	xlabel={},
-	ylabel={},
-	xmin=-1, xmax=1,
-	ymin=-1, ymax=1,
-	xtick={1}, xticklabels={Necessary, Arbitrary}, % Sets the tick labels from bottom to top
-	ytick={1}, yticklabels={Genetically Inherited, Culturally Inherited}, % Sets the tick labels from left to right
-	]
-	 \addplot[only marks,mark size=3pt] coordinates {(-0.5, -0.5) (0.5, 0.5)}; % plot points
-	 \addplot[mark=0,fill opacity=0.3] coordinates {(1,1) (2,2)}; % fill the area between points with opacity
-	 \addplot[blue] coordinates {(1,0) (1,2)}; % vertical line from bottom to top
-	 \addplot[blue] coordinates {(0,1) (2,1)}; % horizontal line from left to right
-	 \node at (axis cs: -0.5,-0.5){Animal Conventions}; % name for first point
-	 \node at (axis cs: 0.5, 0.5){Human Social Institutions}; % name for second point
-\end{axis}
-\end{tikzpicture}
+For example, one can transform a regulative rule "if a bill is issued by the Bureau of Engraving and Printing, it can be used to pay for goods in the United States" into "Bills issued by the Bureau of Engraving and Printing count as money in the United States" by adding an institutional term "money".
 
-O'Connor herself proposes a way to measure the degree of arbitrariness in conventions [-@oconnor2021]. 
+As might be seen from the exposition, the authors base their argument on the notion of insufficiency—of both rules and equilibria as distinct explanations of institutions. However, while justifying the insufficiency of equilibria with applicability of the concept of correlated equilibria to both humans and animals, the authors use the notion of representation in a broad sense, although appeal to @sterelny2003, who uses it in a narrower sense of an advanced cognitive capacity. It means that coordination and correlation are insufficient, and representation is needed. However, the character of this representation is ambiguous: A-rules “represent” game-theoretic strategies in a more philosophical sense and not in a cognitive one, while the authors mention terms like stimuli, behavior and representation, that clearly imply a narrower cognitive perspective and not a wider philosophical one. Since the difference in scope of actionable signals as a key differentiator between correlation of strategies in humans and animals is at the backbone of the authors' argument about the nature of institutions as correlated strategies, it means that "representation" is used in two senses: as an advanced cognitive capacity on which behavior can be conditioned, and as a relation between entities, namely, rules and strategies. The former is representation of environment, and the latter is representation of a strategy by a rule. Both play a role in the argument, but its integrity largely depends on the former. Thus, a couple of questions arises:
+
+- If a capacity for conditioning one's own behavior on representation of environment does not affect the payoff structure of the game, what ensures the ontological difference between animal conventions and human social institutions?
+- Does HDB game describe correlation of strategies?
+
+To answer these, we first need to destructure the notion of institutions into “rules” and "equilibria" and to look at how they are related. Next, we will study HDB.
+
+## 2. Rules, norms and conventions
+What are the rules Guala and Hindriks are talking about? As they stipulate that institutions are norm-governed salient social practices, or behavioral regularities, rules are norms. It is the case for agent rules, though. So, what roles do norms play in institutions? Guala notes that social norms fulfill two functions highlighted by @north1990: they make behaviour more stable and more predictable. However, as noted by Searle, they introduce new behaviours, as well, and they do it by changing game payoffs. Norms help explain not only the persistence of institutions, but also its emergence. But if social norms are inherently important to institutions, what are they, and how do they differ from social institutions?
+
+@hindriks2019 elaborates on the definition of social institutions as norm-governed social practices and explicates how norms might govern practices. His main idea is that modeling social norms as sanctions with costs that agents incur for violating norms, is insufficient for its perception by agents as legitimate. According to the author, this account fails to capture the motivation by the norm itself and not by the costs of its violation. He claims that it is normative expectations and normative beliefs that complement sanctions as a source for norm existence and perception as legitimate. Social norm governs a practice if its participants are motivated to follow its rule to a noteworthy extent.
+***
+Social norms can influence behavior due to sanctions imposed for violating them. Such sanctions modify people's preferences in cooperation games and motivate them to cooperate [@ullmann-margalit1977]. Apart from this, norms can be seen as legitimate, which leads people to conform even if it might not be in their best interest [@bicchieri2005]. This is evidenced by the difficulty people experience when deciding to violate norms. In other words, decisions to conform are often more complex than a simple cost-benefit calculation.
+
+Hindriks highlights coordination and cooperation types of social norms. Coordination norms such as first-come-first-serve as standing in line are contrasted by cooperation norms like “I-will-scratch-your-back-if-you-scratch-mine”. Game-theoretically, this distinction is represented by either aligning or conflicting interests of agents in a game, respectively.
+
+To this end, social institutions can be seen as solutions to coordination or cooperation games. Coordination games have at least two solutions that benefit all players. For example, two sides of the road to drive on. It does not matter on which particular side all the drivers drive, but the side being the same does matter, e.g, left in the UK or right in Europe. Cooperation games have one solution optimal for all players. For example, hunting a stag requires several participants but has a higher payoff for each, whereas hunting a rabbit can be done alone and has a lower payoff. It is more beneficial for everyone to cooperate and hunt a stag to get a higher payoff.
+
+Hindriks studies the conditions of possibility for such behavioral regularities that successfully solve coordination and cooperation problems. He starts with the notion of convention, which is a population-wide beneficial regularity of behavior, deviating unilaterally from which is disadvantageous [@lewis2008]. As there are two or more equally profitable solutions, or equilibria, in coordination problems, the mutual convergence of the agents on the same solution becomes important, otherwise there will be miscoordination. Lewis, a pioneer of game-theoretic analysis of conventions, argues that given recurrent situations with coordination problems, people choose by precedent. They condition their behavior on what they expect others to do, enabling coordinated behavior among the population.
+
+Lewis's account of conventions states that a behavioral regularity is a convention in a population P in a coordination game situation S if the following criteria are fulfilled:
+
+- (1) Members of P conform to the regularity;
+- (2) They expect others to conform;
+- (3) They prefer to conform if others do so;
+- (4) This is common knowledge of the form "everybody knows that everybody knows that P".
+
+At the same time, Lewis regards conventions as norms and does not make a sharp distinction between the two.
+
+On this game-theoretic account, social norms are modeled as sanctions with costs that can alter behavior by influencing agents' preferences, as agents face costs for not conforming to it. High costs and a greater likelihood of violation-detection increase the incentive to cooperate. Institutions, in their turn, are maintained partly because of these norm costs.
+
+At the same time, introduction of sufficiently high delta parameter into cooperation problems transforms them into coordination ones. For instance, given a Prisoner's dilemma with a high delta parameter representing a cost for norm violation, the game becomes that of coordination with two equilibria — “Cooperate, cooperate” and “Defect, defect” (CC, DD) instead of only one — DD [@crawford1995]. This shows that normative rules can in principle be coordination devices, or “choreographers”, as Gintis puts it [@gintis2009a].
+
+%%\begin{figure}[htbp]
+\centering
+\begin{tabular}{c|c|c}
+ & \textbf{Cooperate} & \textbf{Defect} \\ \hline
+\textbf{Cooperate} & (2, 2) & (0,3) \\ \hline
+\textbf{Defect} & (3, 0) & (1, 1) \\
+\end{tabular}\qquad
+\begin{tabular}{c|c|c}
+ & \textbf{Cooperate} & \textbf{Defect} \\ \hline
+\textbf{Cooperate} & (2, 2) & (0, $3-\delta$) \\ \hline
+\textbf{Defect} & ($3-\delta$) & (2, 2) \\
+\end{tabular}
+\caption{\label{fig:delta-transformation-coordination-game}{Delta parameter transforming cooperation game into coordination game.}}
+\end{figure}%%
+
+Hindriks draws a distinction between social norms and conventions: norm-compliance is motivated, and conventions are self-reinforcing. He also calls them descriptive and normative conventions. @bicchieri2005 has stated this in terms of the relationship between self-interest and common interest. They coincide in conventions and do not in norms. It means there can be conventions without norms. However, contra Lewis, @gilbert1992 explicitly treats conventions as intrinsically normative and calls them quasi-agreements conceptually linked to joint intentions, which generate normative reasons for conformity. At the same time, @brennan2013 argue that conventions can become normative because they protect or promote some value. @guala2010 support this by empirical evidence.
+
+Overall, conventions are self-reinforcing, so sanctions are not necessary for creating and maintaining a mutually beneficial behavioral regularity. However, both Lewis and Bicchieri acknowledge that exceptions may exist, making some conventions more fragile than others. Norms, in their turn, make confirming more attractive and thus help to stabilize conventions to ensure collective benefits and prevent malfunctions.
+
+According to the rules-in-equilibria theory of institutions that Hindriks defend along with Guala, institutions are norm-governed social practices. And Hindriks defines a social practice as a regularity in behavior that involves norms. Practices arise in response to signaling devices, which are salient features of the environment that enable agents to align their behaviors in beneficial ways, creating new strategies and thus giving rise to conventions. Interdependent behavioral regularities in coordination games arise from signaling rules of the form “if D, do A”, whereby agents condition their behavior on a signal to coordinate mutually beneficial interactions and achieve collective benefits. In a case of a traffic light, the light itself serves a signaling device that helps to make traffic safer and more efficient by coordinating behaviors.
+
+As normativity pervades social interaction, Hindriks distinguishes two types of normative standards: deontic ones, such as right/wrong, and evaluative ones, such as better/worse. Deontic standards signify obligations, while evaluative standards refer to the quality of performance in various activities, e.g., hosting guests. Social practices can feature either deontic and evaluative standards, evaluative standards only, or neither. As an example, a group of friends that loathes rules may also dislike evaluative standards. This suggests that conventions involve signaling rules, but do not necessarily include normative rules. Therefore, social practices can exist without being an institution.
+
+Hindriks discusses several views of social norms. The 'normative-beliefs view' holds that when people encounter a coordination or cooperation game situation, they are expected to act in a certain way and this is generally known. @brennan2013 define social norms as normative principles or rules which are commonly accepted and known. Social norms are thus generally accepted and recognized normative beliefs.
+
+However, the phenomenon of “pluralistic ignorance” counteracts the 'normative-beliefs view' by being too restrictive in requiring acceptance of the norm. Hindriks provides an example of college students believing that they are expected to drink heavily on weekends, while not really liking doing it. They do not believe that they ought to do so, but they acknowledge that others believe that college students generally do it. To reflect it, the secind, normative-expectations view, proposes that a social norm exists in a population if its rule is present in the normative expectations of its members. This differs from the normative-beliefs view in that it does not require acceptance of the norm, only acknowledgment of it, and that knowledge of others' attitudes is not necessary. It permits inclusion of the norm in first-order beliefs.
+
+Bicchieri's theory [-@bicchieri2005] is largely akin to the normative-expectations view, yet there are three key differences. Firstly, she limits the concept of a social norm to regulations that address cooperation problems, while Hindriks includes coordination ones, as well. Secondly, her conception of normative expectations does not make them normative, strictly speaking, for they are higher-order empirical expectations. Someone has a normative expectation if they expect others to adhere to a descriptive rule of 'Everybody does A'. According to Bicchieri, this involves obligations. However, as Hindriks stipulates, an expectation of behavior differs from the belief that a normative rule applies; the former being an expectation, the latter a belief about what should be done.
+
+The third view of social norms is 'conditional-preferences view'. It holds that a social norm exists when enough participants prefer to conform to it given empirical and normative expectations [@bicchieri2005]. However, @southwood2019 argues that people may secretly wish to break the norm if others do the same and expect each other to do so. According to the conditional-preferences view, perceiving a social norm as legitimate is when someone regards the relevant normative expectations as well-founded. This can motivate people to act accordingly [@bicchieri2005].
+
+Overall, the normative-beliefs view holds that people need only possess normative beliefs featuring a rule for it to be perceived as legitimate; these beliefs are self-justifying. The conditional-preferences view, however, states that legitimacy is derived from justified normative expectations.
+
+According to Hindriks, neither of these two views is adequate. The normative-beliefs view holds that social norms are self-justifying and tend to be regarded as legitimate. Yet, pluralistic ignorance shows that this is not always the case. The normative-expectations view suggests that perceived legitimacy is based on justified normative expectations, which lead to corresponding beliefs. This belief lies at the core of what it means for a social norm to be seen as legitimate, and can only be suitably justified with empirical and normative expectations. The conditional-preferences view fails to capture this complexity, while the normative-expectations view does so by explicating legitimacy in terms of an agent's normative beliefs. This motivates agents to conform and makes a difference to behavior within institutions.
+
+Moreover, the normative-expectations view states that a social norm has authority if the normative beliefs people have are suitably justified. This is only true if the expectations are both justified and true, indicating that there is an applicable regularity and that others believe the norm applies.
+
+According to Hindriks, for a social norm to govern a social practive, its participants must adhere to it. This will create an institution, which will be perceived as legitimate and have authority. However, norm-following alone is too demanding an explanation for institutions that are not seen as legitimate. Sanctions, which are important in formal and informal norms, demonstrate that norm-following does not always lead to conformity.
+
+In sum, a norm governs a practice only if it motivates a substantial number of participants. It happens when it is deemed significant to conform to it. Norm-conformity is not enough for norm-governance, as demonstrated by the example of the convention to drive on the right-hand side of the road. This convention is self-reinforcing, but does not motivate anybody and does not constitute an institution. Thus, neither norm-following nor norm-conformity is necessary for norm-governance and norm-conformity is insufficient.
+
+To this end, social institutions are norm-driven conventions, or social practices, that require cognitive capacities for recognition, complying to and changing of social norms. Now let us turn to the notion of equilibria and study what ensures the ontological difference between animal conventions and human social institutions given that representation-based behavior conditioning does not affect the payoff structure of a game?
 
 ## Correlation and asymmetry of strategies
-So far, we have established that conventions as "function-stabilizing mechanisms" might evolve from repeated signaling games and that it is possible to measure their arbitrariness. The next important question is what kind of equilibrium a convention is if it of evolutionary origin? 
+So far, we have established that conventions as "function-stabilizing mechanisms" might evolve from repeated signaling games and that it is possible to measure their arbitrariness. The next important question is what kind of equilibrium a convention is if it of evolutionary origin?
 
 Guala and Hindriks draw inspiration for their rules-in-equilibria theory of social institutions in Maynard Smith's concept of *"bourgeois equilibrium"* [@maynardsmith1982]. They see the "Hawk-dove-bourgeois" game of animal territorial ownership as a prototypical "animal convention". According to the authors, bourgeois equilibrium is essentially a correlated equilibrium, however Maynard Smith uses bourgeois to define ESS. It creates tension, for correlated equilibrium and ESS are mathematically distinct: the former is "too loose" and the latter is "too strict", and it is unclear how they can be combined. Hence, the issue consists of clarifying the status of bourgeois equilibrium in comparison to correlated equilibrium, ESS and mixed-strategy equilibrium, as well. It is due to being at the core of Guala's argument for institutions as correlation rooted in evolution. Let us look at the Maynard Smith's notion of bourgeois equilibrium represented by the "Hawk-dove-bourgeois" (HDB) game.
 
 ### Maynard Smith's "Hawk-dove-bourgeois" game
+Maynard Smith introduces the notion of "bourgeois equilibrium" (BE) in the context of animal behavior in evolutionary perspective [-@maynardsmith1982].
 
-Maynard Smith introduces the notion of "bourgeois equilibrium" (BE) in the context of animal behavior in evolutionary perspective [-@maynardsmith1982]. 
+It is a game-theoretic solution concept that takes into account that players may not always be able to perfectly predict each other's moves and reach an ideal Nash equilibrium. Instead, they settle for a BE which is an acceptable compromise between their own and their opponents' goals. It assumes that each player is trying to maximize their own self-interest, but no player is attempting to dominate or exploit the others. A "bourgeois equilibrium" occurs when all players have reached a strategy profile (a combination of strategies for all players) such that none of them can improve their payoff by changing only their own strategy, while also recognizing the strategies of the other players. In BE, each player chooses a strategy independently. This is distinct from mixed-strategy equilibrium, correlated equilibrium and evolutionary stable correlation, which involve coordination or communication among players.
 
-It is a game-theoretic solution concept that takes into account that players may not always be able to perfectly predict each other's moves and reach an ideal Nash equilibrium. Instead, they settle for a BE which is an acceptable compromise between their own and their opponents' goals. It assumes that each player is trying to maximize their own self-interest, but no player is attempting to dominate or exploit the others. A "bourgeois equilibrium" occurs when all players have reached a strategy profile (a combination of strategies for all players) such that none of them can improve their payoff by changing only their own strategy, while also recognizing the strategies of the other players. In BE, each player chooses a strategy independently. This is distinct from mixed-strategy equilibrium, correlated equilibrium and evolutionary stable correlation, which involve coordination or communication among players. 
+More precisely, BE is a type of ESS where individuals cooperate with each other instead of competing. It is different from the other types of equilibria in that it does not rely on the assumption that players are completely rational and make optimal decisions based on their individual payoffs. Instead, this type of equilibrium assumes that players will use a mixture of cooperation and defection, depending on the situation they find themselves in.
 
-More precisely, BE is a type of ESS where individuals cooperate with each other instead of competing. It is different from the other types of equilibria in that it does not rely on the assumption that players are completely rational and make optimal decisions based on their individual payoffs. Instead, this type of equilibrium assumes that players will use a mixture of cooperation and defection, depending on the situation they find themselves in. 
-
-In comparison, a mixed-strategy equilibrium is an equilibrium in which players employ a combination of strategies instead of only one strategy in order to maximize their expected payoff. Mathematically, this can be represented as $P_i(s_i, s_{-i}) = \sum_{s_j} p(s_j) \cdot u_i(s_i, s_j)$ for all players $i$ and all strategies $s$, where $P_i$ is the expected payoff for player $i$, $p$ is the probability distribution over the strategies employed by all players, and $u$ is the utility function for player $i$. In contrast, bourgeois equilibrium does not require any probabilistic elements; rather it simply requires that each player select a single strategy that they believe will yield the best outcomes. 
+In comparison, a mixed-strategy equilibrium is an equilibrium in which players employ a combination of strategies instead of only one strategy in order to maximize their expected payoff. Mathematically, this can be represented as $P_i(s_i, s_{-i}) = \sum_{s_j} p(s_j) \cdot u_i(s_i, s_j)$ for all players $i$ and all strategies $s$, where $P_i$ is the expected payoff for player $i$, $p$ is the probability distribution over the strategies employed by all players, and $u$ is the utility function for player $i$. In contrast, bourgeois equilibrium does not require any probabilistic elements; rather it simply requires that each player select a single strategy that they believe will yield the best outcomes.
 
 Correlated equilibrium (CE) is an extension of NE where each player's strategy depends on an additional set of random variables called "signals." Mathematically, this can be represented as $\sum_{a \in A} P(a) \cdot v (a | x) = v(x)$, where $A$ is the set of possible action profiles, $P$ is a probability distribution over those profiles, and $v$ is the utility function for player i. CE is different from BE in that it allows for the possibility of coordination amongst the players, such as by having one player’s strategy depend on another’s. This coordination does not occur in bourgeois equilibrium, which instead focuses on each individual’s strategy being independent from one another.
 
 Evolutionary stable correlation (ESC) describes a situation in which two or more agents have adapted to cooperate with each other to achieve higher payoffs than either could achieve alone. Mathematically, this can be represented as $\max_{p \in \Delta} [U(p)]$, where $\Delta$ is the set of probability distributions over actions taken by agents and $U$ represents their joint utility function.
 
 Mathematically, BE is represented by a NE, which is defined as: $$(s_1^*, s_2^*, \dots s_n^*) \in S_1 \times S_2 \times \dots S_n$$
-where $s_i^*$ represents the optimal strategy for player $i$. 
-In contrast, a mixed-strategy equilibrium can be represented as: $$(p_1, p_2, \dots p_n) \in D$$ 
-where $D$ is the set of probability distributions over $S_1 \times S_2 \times\dots S_n$. A correlated equilibrium (CE) can be represented as: $$(s_{c1}, s_{c2},\dots s_{cn}) \in S_{C1} \times S_{C2} \times\dots S_{Cn}$$ 
-where $S_{Ci}$ represents the set of strategies available to Player $i$ given the coordination between players. And an evolutionary stable correlation (ESC) can be represented by a Nash Equilibrium with strictly dominant strategies: $$(s^{* *}, s^{* *},\dots s^{* *}) \in S'$$ 
+
+where $s_i^*$ represents the optimal strategy for player $i$.
+
+In contrast, a mixed-strategy equilibrium can be represented as: $$(p_1, p_2, \dots p_n) \in D$$
+
+where $D$ is the set of probability distributions over $S_1 \times S_2 \times\dots S_n$. A correlated equilibrium (CE) can be represented as: $$(s_{c1}, s_{c2},\dots s_{cn}) \in S_{C1} \times S_{C2} \times\dots S_{Cn}$$
+
+where $S_{Ci}$ represents the set of strategies available to Player $i$ given the coordination between players. And an evolutionary stable correlation (ESC) can be represented by a Nash Equilibrium with strictly dominant strategies: $$(s^{* *}, s^{* *},\dots s^{* *}) \in S'$$
+
 where $S'$ is the set of strict dominant strategies.
 
 ### Interpretation of HDB: correlation
-There are two main interpretations of bourgeois equilibrium: with correlation and with uncorrelated asymmetry. Let us look closer at each. 
+There are two main interpretations of bourgeois equilibrium: with correlation and with uncorrelated asymmetry. Let us look closer at each.
 
-What is meant by "correlation of strategies" in the first place? Correlation of strategies is a stable state of strategic interaction. It is represented by the concept of correlated equilibrium that goes beyond the Nash equilibrium and allows players to coordinate their strategies through the use of a common randomizer, such as a coin toss or a dice roll. This allows players to make decisions based on their beliefs about how the other players will act, which can increase the efficiency of their strategies. The concept of correlated equilibrium has been used to explain various phenomena in strategic decision making, including how people form coalitions, how firms cooperate and compete, and how players interact in team games. 
+What is meant by "correlation of strategies" in the first place? Correlation of strategies is a stable state of strategic interaction. It is represented by the concept of correlated equilibrium that goes beyond the Nash equilibrium and allows players to coordinate their strategies through the use of a common randomizer, such as a coin toss or a dice roll. This allows players to make decisions based on their beliefs about how the other players will act, which can increase the efficiency of their strategies. The concept of correlated equilibrium has been used to explain various phenomena in strategic decision making, including how people form coalitions, how firms cooperate and compete, and how players interact in team games.
 
-Correlated equilibria can be defined by the following equation: 
+Correlated equilibria can be defined by the following equation:
+
 $$\max_{x_1,...x_n} \sum_{i=1}^{n} u_i(x_i) $$
+
 $$\text{s.t.} \quad x_1 = c(y_1,...y_{n-1}) \quad \forall i>1: x_i=c(y_i)$$
-where $u_i$ represents the utility function for each player $i$, $x$ represents the strategy chosen by each player $i$, and $y$ represents the common randomizer chosen by all players. The equation states that the optimal strategy for each player is dependent on both their own decisions and on those of other players, which reflects how correlated equilibria allow people to take into account each other’s behavior when making decisions.  
+
+where $u_i$ represents the utility function for each player $i$, $x$ represents the strategy chosen by each player $i$, and $y$ represents the common randomizer chosen by all players. The equation states that the optimal strategy for each player is dependent on both their own decisions and on those of other players, which reflects how correlated equilibria allow people to take into account each other’s behavior when making decisions.
 
 If bourgeois strategy is an ESS, it does not presuppose any randomization. However, many scholars studying the emergence of conventions interpret them as CE. Some researchers base their explanations on interpretation of HDB. For example, @guala2016b defines social institutions as CE with normative force rooted in HDB. Gintis explicitly refers to HDB as not to strict NE, but as to CE [@gintis2009a].
 
-The intrinsic problem with bourgeois as CE is the source of randomization. Some scholars appeal to Nature as to a such source, calling it a *correlation device*, thus eliminating the tension between the requirement of randomization and symmetry of ESS [@cripps1991; @skyrms2014; @metzger2018]. In particular, Gintis defines CE as an NE of a game $G$ augmented by the initial move by Nature that who observes a random variable $\gamma$ on a probability space $(\Gamma, p)$ and issues directives $f_{i}(\gamma) \in S$ to each player $i$, such that choosing the directive is a best response given agents having a common prior $p$ and assuming other players are also following Nature's directives [@gintis2009a, 135-136]. 
+The intrinsic problem with bourgeois as CE is the source of randomization. Some scholars appeal to Nature as to a such source, calling it a *correlation device*, thus eliminating the tension between the requirement of randomization and symmetry of ESS [@cripps1991; @skyrms2014; @metzger2018]. In particular, Gintis defines CE as an NE of a game $G$ augmented by the initial move by Nature that who observes a random variable $\gamma$ on a probability space $(\Gamma, p)$ and issues directives $f_{i}(\gamma) \in S$ to each player $i$, such that choosing the directive is a best response given agents having a common prior $p$ and assuming other players are also following Nature's directives [@gintis2009a, 135-136].
 
 In their theory, Guala and Hindriks appeal to Skyrms's interpretation of the "Hawk-dove" that is with correlation. According to Skyrms, the implicative nature of the "bourgeois" strategy in the form "if own, then Hawk" and "if do not own, then Dove" is genuinely correlative. “Bourgeois” is correlated equilibrium spontaneously arising from symmetry-breaking that happens when individuals randomize the choice of their strategies and do not know whether they are “hawkes” or “doves” [-@skyrms2014, 78].
 
@@ -265,6 +293,3 @@ Another interpretation of HDB involves uncorrelated asymmetry instead of correla
 [^2]: Correlated equilibrium is a general solution concept introduced by Aumann [-@aumann1974; -@aumann1987]. As opposed to the classic Nash equilibrium, where players choose their strategies independently, here players choose strategies based on a public signal the value of which they assess privately, thus coordinating their actions according to a given correlation device.
 [^3]: An ESS is a strategy which, if adopted by a population, is resilient to invasion by any alternative strategy. Mathematically, an ESS can be defined as a strategy profile $\boldsymbol{s} = (s_1, s_2, ... , s_n)$ such that $\forall \boldsymbol{s'} \neq \boldsymbol{s}$, we have $\pi(\boldsymbol{s}, \boldsymbol{s}) > \pi(\boldsymbol{s}, \boldsymbol{s'})$, where $\pi$ is the average payoff of the population playing the strategies $\boldsymbol{s}$ and $\boldsymbol{s'}$ [@maynardsmith1982].
 [^4]: Nash equilibrium is a solution concept describing a strategy profile consisting of each player's best response to the other player's strategies where no one gains bigger payoff by deviating unilaterally.
-[^5]: A strict Nash equilibrium is a Nash equilibrium where the player would even do worse by deviating unilaterally.
-[^6]: Replicator dynamics is a mathematical model used to describe the evolution of biological populations. It is based on the idea that individuals in a population can replicate themselves over multiple generations, and that their success or failure depends on their behavior relative to other members of the population. Mathematically, it is given by $\dot{x_i} = x_i(f_i(x) - \bar{f}(x))$, where $x_i$ is the proportion of individuals in the population exhibiting a particular behavior, $f_i(x)$ is the fitness associated with that behavior, and $\bar{f}(x)$ is the average fitness in the population.
-[^7]: There is an interesting similarity between a semantic regulatory mechanism like Harms' and regulatory networks in biology, that govern the dynamical repertoire of a given system like structural and regulatory genes [[@albert2014]].

@@ -7,3 +7,5 @@ Scientific ontology describes objects of study for a given scientific discipline
 …
 
 Social ontology needs naturalistic constraints to more precisely define the objects of study, epistemology, and methodology of social science.
+
+> Our best guide to ontology is provided by our best scientific theories. According to the widely accepted method of inference to the best explanation, we can infer what exists from the theories that best explain our observations. In light of this, we believe that those doing ontology cannot avoid being concerned with explanation. [@guala2015, 478]

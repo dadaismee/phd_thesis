@@ -13,6 +13,8 @@ top-level-division: chapter # default | section | chapter | part
 toc: true
 toc-depth: 2
 citeproc: true
+filters:
+    - mermaid-filter
 metadata:
   bibliography: /Users/valerii/Zotero/zotero.bib
   csl: /Users/valerii/Zotero/styles/apa.csl
