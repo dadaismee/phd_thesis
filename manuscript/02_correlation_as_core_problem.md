@@ -1,5 +1,5 @@
 ---
-title: ANR Lab seminar
+title: Evolutionary stable correlation as a core problem of social ontology
 author: Valerii Shevchenko
 affiliation: HSE University
 abstract: 
