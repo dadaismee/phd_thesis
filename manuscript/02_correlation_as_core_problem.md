@@ -1,5 +1,5 @@
 ---
-title: Evolutionary stable correlation as a core problem of social ontology
+title: ANR Lab seminar
 author: Valerii Shevchenko
 affiliation: HSE University
 abstract: 
@@ -15,7 +15,7 @@ In this paper, I argue that the emergence of evolutionary stable correlation is 
 
 To expand, let us first look at Guala's [-@guala2016b] argument that has the following logic:
 
-1. social institutions are backed not by constitutive rules of the form "X counts as Y in (the context of) C", like in Searle [-@searle1995][^1], but by regulative rules of the form "do X if Y"
+1. social institutions are backed not by constitutive rules of the form "X counts as Y in (the context of) C", like in Searle [-@searle1995],[^1] but by regulative rules of the form "do X if Y"
 2. from a game-theoretic point of view, regulative rules can be seen as agents' strategies that comprise a *correlated equilibrium*[^2]
 3. constitutive rules are linguistically transformed regulative rules with added theoretical term that represents a certain equilibrium
 4. at the same time, many animal species including baboons, lions, swallowtails, and others exhibit behavioral patterns describable in the form similar to correlated equilibrium [@maynardsmith1982]
@@ -50,7 +50,7 @@ Taking into account the wealth of research on transition from ESS to correlation
 
 It is relevant, for if social institutions have emerged from 'animal conventions' with the aid of cognitive capacities like mindreading and/or mindshaping [@zawidzki2013], it constrains social ontology as the scope of possible objects of study to the logical derivatives of social institutions and social coordination in general as discussed in @shevchenko2023.
 
-This paper is structured as follows. The first section is devoted to description of the rules-in-equilibria (RiE) theory of social institutions. In the second section, the relationship between social institutions, conventions, and norms is discussed. The third section examines the notion of representation as used in RiE. In the fourth section, the role of Hawk-Dove-Bourgeois game as correlation and as asymmetry of strategies is studied. The final section explores the source of randomization in correlation as the problem in social institutions as evolved correlated equilibria. 
+This paper is structured as follows. The first section is devoted to description of the rules-in-equilibria (RiE) theory of social institutions. In the second section, the relationship between social institutions, conventions, and norms is discussed. The third section examines the notion of representation as used in RiE. In the fourth section, the role of Hawk-Dove-Bourgeois game as correlation and as asymmetry of strategies is studied. The final section explores the source of randomization in correlation as the problem in social institutions as evolved correlated equilibria.
 
 Let us start with the notion of social institutions, destructure it into norms and conventions, study their relations and gradually arrive at the issue of coordination either by correlation or by asymmetry of strategies.
 
@@ -63,7 +63,7 @@ The rule-based account conceives of social institutions as rules guiding and con
 
 According to the authors, the rule-based account is insufficient, for it cannot explain why some rules are followed and others not. To address this issue, an equilibrium account is needed to show the strategic character of rule-following.
 
-Hindriks and Guala illustrate this point by comparing the two paradigmatic games from game theory, which are prisoner's dilemma and stag hunt. Although mutual defection in the prisoner's dilemma is a Nash equlibrium (NE)[^4], it is not a social institution, however, for it is not self-sustaining due to independence of players' strategies. In contrast, the mutual decision to hunt a stag instead of a hare, which are also both NE, is an institution, for it requires correlation of players' strategies to achieve a bigger joint payoff. The latter means that the strategy is salient and beneficial for players, what explains why some rules are followed and other not.
+Hindriks and Guala illustrate this point by comparing the two paradigmatic games from game theory, which are prisoner's dilemma and stag hunt. Although mutual defection in the prisoner's dilemma is a Nash equlibrium (NE),[^4] it is not a social institution, however, for it is not self-sustaining due to independence of players' strategies. In contrast, the mutual decision to hunt a stag instead of a hare, which are also both NE, is an institution, for it requires correlation of players' strategies to achieve a bigger joint payoff. The latter means that the strategy is salient and beneficial for players, what explains why some rules are followed and other not.
 
 \begin{table}[h]
 \centering
@@ -165,7 +165,9 @@ However, it is not evident how exactly rules represent strategies. To clarify th
 The constitutive rules approach argues that our beliefs are essential for the existence of institutions, which involve more than just actions. This applies to objects, persons, and events too—for example, “Bills issued by the Bureau of Engraving and Printing count as money in the United States” [@searle1995, 28]. X can be replaced by predicates that refer to any ontological category [@guala2015, 470].
 
 As the authors note, constitutive rules are linguistically transformed regulative rules, aided with a new term to name an institution. Combining these accounts enables researchers to investigate Y terms like “money” used by individuals in everyday life and analyze their internal regulative and strategic character, thus bridging explicit ontology of social science and implicit ontology of ordinary language. The main idea of this argument, thus, is that constitutive rules can be developed at will from regulative rules or game-theoretic strategies by introducing institutional terms [@guala2015, 477].
+
 $$\text{Regulative rules} \, + \, \text{Institutional terms}= \text{Constitutive rules}$$
+
 For example, one can transform a regulative rule "if a bill is issued by the Bureau of Engraving and Printing, it can be used to pay for goods in the United States" into "Bills issued by the Bureau of Engraving and Printing count as money in the United States" by adding an institutional term "money". Now let us turn to the relationship between the concepts of rules, norms, conventions and institutions in rules-in-equilibria theory.
 
 ## 2. Rules, norms and conventions
@@ -190,7 +192,7 @@ Lewis's account of conventions states that a behavioral regularity is a conventi
 
 On this account, conventions are strict NE. At the same time, Lewis regards conventions as norms and does not make a sharp distinction between the two.
 
-Vanderschraaf advances Lewis's notion of convention by formalizing the notion of salience central to Lewis's account. He shows that conventions are not NE, but correlated equilibria [@vanderschraaf1995; @vanderschraaf2001].  
+Vanderschraaf advances Lewis's notion of convention by formalizing the notion of salience central to Lewis's account. He shows that conventions are not NE, but correlated equilibria [@vanderschraaf1995; @vanderschraaf2001].
 
 On this game-theoretic account, social norms are modeled as sanctions with costs that can alter behavior by influencing agents' preferences, as agents face costs for not conforming to it. High costs and a greater likelihood of violation-detection increase the incentive to cooperate. Institutions, in their turn, are maintained partly because of these norm costs.
 
@@ -277,53 +279,98 @@ Thus, for the whole argument about social institution as rules-in-equilibria to 
 For the theory to fully work, it is needed to clarify the mechanics of decoupled representation: how it contributes to the emergence of new strategies to the extent that agents acquire an advanced capacity to represent game structure and salient features of equilibria, if they do at all. However, this is out of scope of this paper. Now we take a step back and analyze the notion of a "Hawk-Dove-Bourgeois" game as introduced by @maynardsmith1982 that plays a crucial role in the argument of Guala and Hindriks.
 
 ## 4. Correlation and asymmetry of strategies
-So far, we have established that conventions as "function-stabilizing mechanisms" might evolve from repeated signaling games and that it is possible to measure their arbitrariness. The next important question is what kind of equilibrium a convention is if it of evolutionary origin?
+Guala and Hindriks draw inspiration for their rules-in-equilibria theory of social institutions in Maynard Smith's concept of *"bourgeois equilibrium"* [@maynardsmith1982]. They see the "Hawk-Dove-Bourgeois" (HDB) game of animal territorial ownership as representing a prototypical "animal convention". According to the authors, bourgeois equilibrium (BE) is essentially a correlated equilibrium (CE), however Maynard Smith uses bourgeois to define evolutionary stable strategies ESS. It creates tension, for CE and ESS are mathematically distinct: the former is "too loose" and the latter is "too strict" in terms of the stability conditions, and it is unclear how they can be combined. Hence, the issue consists of clarifying the status of BE: whether its situation describes a CE, an ESS or something else. It is due to being at the core of Guala's argument for institutions as correlation of strategies rooted in evolution. Let us look at the Maynard Smith's notion of BE captured in the the HDB game.
 
-Guala and Hindriks draw inspiration for their rules-in-equilibria theory of social institutions in Maynard Smith's concept of *"bourgeois equilibrium"* [@maynardsmith1982]. They see the "Hawk-dove-bourgeois" game of animal territorial ownership as a prototypical "animal convention". According to the authors, bourgeois equilibrium is essentially a correlated equilibrium, however Maynard Smith uses bourgeois to define ESS. It creates tension, for correlated equilibrium and ESS are mathematically distinct: the former is "too loose" and the latter is "too strict", and it is unclear how they can be combined. Hence, the issue consists of clarifying the status of bourgeois equilibrium in comparison to correlated equilibrium, ESS and mixed-strategy equilibrium, as well. It is due to being at the core of Guala's argument for institutions as correlation rooted in evolution. Let us look at the Maynard Smith's notion of bourgeois equilibrium represented by the "Hawk-dove-bourgeois" (HDB) game.
+### 4.1 Maynard Smith's "Hawk-Dove-Bourgeois" game
+@maynardsmith1982 famously has introduced the notion of ESS into game theory. A 'strategy' is a behavioral phenotype, a specification of what an individual will do in any situation. An ESS is a strategy that, if adopted by all members of a population, prevents the invasion of any mutant strategy by natural selection. The concept originated in the context of animal behavior, but can be applied to any phenotypic variation; e.g., growth form, age at first reproduction, or relative number of offspring
 
-### 4.1 Maynard Smith's "Hawk-dove-bourgeois" game
-Maynard Smith introduces the notion of "bourgeois equilibrium" (BE) in the context of animal behavior in evolutionary perspective [-@maynardsmith1982].
+He proposes a model of a 'Hawk-Dove' game that represents a *mis*coordination game between two agents. In a competition for some resource, 'Hawk' fights for it and 'Dove' displays and retreats if threatened.
 
-It is a game-theoretic solution concept that takes into account that players may not always be able to perfectly predict each other's moves and reach an ideal Nash equilibrium. Instead, they settle for a BE which is an acceptable compromise between their own and their opponents' goals. It assumes that each player is trying to maximize their own self-interest, but no player is attempting to dominate or exploit the others. A "bourgeois equilibrium" occurs when all players have reached a strategy profile (a combination of strategies for all players) such that none of them can improve their payoff by changing only their own strategy, while also recognizing the strategies of the other players. In BE, each player chooses a strategy independently. This is distinct from mixed-strategy equilibrium, correlated equilibrium and evolutionary stable correlation, which involve coordination or communication among players.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+& \textbf{Hawk} & \textbf{Dove} \\ \hline
+\textbf{Hawk} & $\frac{1}{2}(V-C)$, $\frac{(V-C)}{2}$ & $V$ \\ \hline
+\textbf{Dove} & $0$ & $\frac{V}{2}$ \\ \hline
+\end{tabular}
+\caption{\small A 'Hawk-Dove' game. The payoffs are determined by the value of the resource ($V$) and the cost of fighting ($C$). Value $V$ increases the Darwinian fitness of an individual if they obtain the resource, and cost $C$ reduces it if injured in a fight over the resource. Not gaining $V$, however, does not mean zero fitness.}
+\end{table}
 
-More precisely, BE is a type of ESS where individuals cooperate with each other instead of competing. It is different from the other types of equilibria in that it does not rely on the assumption that players are completely rational and make optimal decisions based on their individual payoffs. Instead, this type of equilibrium assumes that players will use a mixture of cooperation and defection, depending on the situation they find themselves in.
+As this model is at the core of Guala's theory, its assumptions are important. This model assumes an infinite population with asexual reproduction and symmetric contests between two opponents. It also has a finite set of strategies.
 
-In comparison, a mixed-strategy equilibrium is an equilibrium in which players employ a combination of strategies instead of only one strategy in order to maximize their expected payoff. Mathematically, this can be represented as $P_i(s_i, s_{-i}) = \sum_{s_j} p(s_j) \cdot u_i(s_i, s_j)$ for all players $i$ and all strategies $s$, where $P_i$ is the expected payoff for player $i$, $p$ is the probability distribution over the strategies employed by all players, and $u$ is the utility function for player $i$. In contrast, bourgeois equilibrium does not require any probabilistic elements; rather it simply requires that each player select a single strategy that they believe will yield the best outcomes.
+Defining the stability criteria for the strategies, he proposes that If a strategy $I$ is stable against $J$, it must satisfy the “standard conditions” from @smith1973: the fitness of typical members adopting $I$ must be greater than any mutant $J$, such that:
 
-Correlated equilibrium (CE) is an extension of NE where each player's strategy depends on an additional set of random variables called "signals." Mathematically, this can be represented as $\sum_{a \in A} P(a) \cdot v (a | x) = v(x)$, where $A$ is the set of possible action profiles, $P$ is a probability distribution over those profiles, and $v$ is the utility function for player i. CE is different from BE in that it allows for the possibility of coordination amongst the players, such as by having one player’s strategy depend on another’s. This coordination does not occur in bourgeois equilibrium, which instead focuses on each individual’s strategy being independent from one another.
+- either $E(I, I)>E(J, I)$ or $E(I, I)=E(J, I)$
+- and $E(I, J)>E(J, J)$.
 
-Evolutionary stable correlation (ESC) describes a situation in which two or more agents have adapted to cooperate with each other to achieve higher payoffs than either could achieve alone. Mathematically, this can be represented as $\max_{p \in \Delta} [U(p)]$, where $\Delta$ is the set of probability distributions over actions taken by agents and $U$ represents their joint utility function.
+According to these conditions, $D$ cannot be an ESS, for $E(D,D) < E(H,D)$, and $H$ is an ESS if costs of injury are less than potential gain from the resource, $V > C$. If $V<C$, neither $H$ nor $D$ is an ESS. To proceed, Maynard Smith considers the behavior of individuals who can play either strategy with a certain probability, which they pass on to their offspring. This strategy takes the form 'play $H$ with probability $P$, and $D$ with probability $(1-P)$'.
 
-Mathematically, BE is represented by a NE, which is defined as: $$(s_1^*, s_2^*, \dots s_n^*) \in S_1 \times S_2 \times \dots S_n$$
+A mixed strategy $I$, which randomly chooses an action from a set of possible actions, may be an ESS if the expected payoffs of the strategies composing it are equal. This follows from a theorem by @bishop1978: if a mixed ESS includes the pure strategies $A, B, C, \ldots$ with non-zero probability, then $$E(A, I)=E(B, I)=E(C, I)=\ldots=E(I, I)$$
 
-where $s_i^*$ represents the optimal strategy for player $i$.
+Intuitively, this means that if $E(A, I)>E(B, I)$, adopting $A$ more often and $B$ less often would be more advantageous than following strategy $I$, making it not an ESS.
 
-In contrast, a mixed-strategy equilibrium can be represented as: $$(p_1, p_2, \dots p_n) \in D$$
+However, $I$ can be an ESS if probability of its adoption is $P=V/C$. In contests where the cost of injury is greater than the rewards of victory, $V < C$, mixed strategies with $P=V/C$ are evolutionarily stable.
 
-where $D$ is the set of probability distributions over $S_1 \times S_2 \times\dots S_n$. A correlated equilibrium (CE) can be represented as: $$(s_{c1}, s_{c2},\dots s_{cn}) \in S_{C1} \times S_{C2} \times\dots S_{Cn}$$
+What is important, a game with two pure strategies always has an ESS, and games with three or more strategies may not have one. As we remember, both "Hawk-Dove" and "Grazing" games have three strategies.
 
-where $S_{Ci}$ represents the set of strategies available to Player $i$ given the coordination between players. And an evolutionary stable correlation (ESC) can be represented by a Nash Equilibrium with strictly dominant strategies: $$(s^{* *}, s^{* *},\dots s^{* *}) \in S'$$
+@maynardsmith1982 introduces the distinction between symmetric and asymmetric games. He illustrates them with animal contests. An asymmetric contest is one where participants have different roles, allowing them to use different strategies. Roles must be identifiable and can be based on gender, ownership, or intruder status. Circumstances which determine an individual's role are assumed to be independent of their genetic strategy. A contest with no role differentiation is 'symmetric'. @maynardsmith1982 characterizes them as follows:
 
-where $S'$ is the set of strict dominant strategies.
+1. Contests are between two individuals of distinct roles (e.g., owner/intruder, larger/smaller, older/younger);
+2. Both individuals know their role;
+3. Both have the same strategies available (e.g., escalate, retaliate, display);
+4. Role may influence chances of winning or value of victory.
+
+The Hawk-Dove game is symmetrical—both players have the same choice of strategies and payoffs. However, most contests are asymmetric, with differences in size, strength, gender, age, or ownership influencing strategy choice and/or altering payoffs or success in escalation. Even when the asymmetry does not change payoffs or escalation outcomes, it may still determine the players' actions.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+& \textbf{Hawk} & \textbf{Dove} & \textbf{Bourgeois} \\ \hline
+\textbf{Hawk} & $-1$ & $2$ & $0.5$ \\ \hline
+\textbf{Dove} & $0$ & $1$ & $0.5$ \\ \hline
+\textbf{Bourgeois} & $-0.5$ & $1.5$ & $1$ \\ \hline
+\end{tabular}
+\caption{\small 'Hawk-Dove-Bourgeois' game}
+\end{table}
+
+In this example, the Hawk-Dove game is extended to include a third strategy, $B$ (or Bourgeois), which is defined as 'if owner, play Hawk; if intruder, play Dove'. This strategy is ESS and the only ESS of this game. It is assumed that each strategy type is owner and intruder equally frequently. Hence, even when ownership does not alter payoffs or success in fighting, an asymmetry of ownership can be used as a conventional one to settle the contest.
+
+Here, the $B$ player chooses $H$ and $D$ with equal frequency, acting as an owner on half the occasions and an intruder on the other half. And when two $B$'s compete, if one chooses $H$, the other chooses $D$. If $V>C$, the ESS is $H$ as it is worth risking injury to gain the resource; if $V<C$, the ESS is $B$ as ownership settles the contest without escalation. It means that in both 'Hawk-Dove' and 'Grazing' games $V < C$.[^5]
+
+Crucially, this assumes that *the probability of an individual occupying a role is independent of their strategy*. This holds true even for strategy $B$, wherein the individual's role is correlated with their chosen action (Hawk or Dove). The assumption is that the strategy B itself is unrelated to role. In other words, If an agent is indeed an 'owner', it does not entail that she always plays a certain 'owner' strategy like 'Hawk' or 'Bourgeois'. However, according to @gintis2007a, empirical findings corroborate the existence of the 'endowment' effect, when owners value a resource more than intruders, thus making them fight harder for it. It presupposes a certain degree of correlation between role and strategy.
+
+@smith1976 used the term 'uncorrelated asymmetry' to refer to contests in which the value of the resource, or chance of victory, is not the same for both owner and intruder. The payoffs to owners and intruders are often not equal, so the territory may be more valuable to an owner who has already familiarized themselves with food, refuge, and other. Ownership may even offer advantages in escalated contests. Inequality of payoffs is possible due to size or age asymmetry. Even if there is no inequality, an asymmetry can still settle contests. Thus, "Grazing" game as presented by Guala, does not require a correlated device and may be solved by uncorrelated asymmetry alone, as both players recognize the asymmetry of ownership and the value of territorial gains is less than the costs of potential injury, $V < C$, for they might value their own territory more than potential one.
+
+Overall, BE assumes that each player is trying to maximize their own self-interest, but no player is attempting to dominate or exploit the others. A BE is certainly a situation and not a solution concept. It occurs when the players have reached a strategy profile in which none of them can improve their payoff by changing only their own strategy, while also recognizing the other player strategies.
+
+As there are two possible interpretation of BE—correlation of strategies and uncorrelated asymmetry, let us consider both.
 
 ### 4.2 Interpretation of HDB: correlation
-There are two main interpretations of bourgeois equilibrium: with correlation and with uncorrelated asymmetry. Let us look closer at each.
+Guala and Hindriks put forward that coordination in social institutions, and in 'Hawk-Dove-Bourgeois' as an exemplar case of property, is due to correlation of strategies. But what is "correlation of strategies" in the first place?
 
-What is meant by "correlation of strategies" in the first place? Correlation of strategies is a stable state of strategic interaction. It is represented by the concept of correlated equilibrium that goes beyond the Nash equilibrium and allows players to coordinate their strategies through the use of a common randomizer, such as a coin toss or a dice roll. This allows players to make decisions based on their beliefs about how the other players will act, which can increase the efficiency of their strategies. The concept of correlated equilibrium has been used to explain various phenomena in strategic decision making, including how people form coalitions, how firms cooperate and compete, and how players interact in team games.
+Correlation of strategies is a stable state of strategic interaction. It is represented by the concept of correlated equilibrium (CE) that goes beyond the Nash equilibrium and allows players to coordinate their strategies through the use of a common randomizer, such as a coin toss or a dice roll. This allows players to make decisions based on their beliefs about how the other players will act, which can increase the efficiency of their strategies. The concept of CE has been used to explain various phenomena in strategic decision making, including how people form coalitions, how firms cooperate and compete, and how players interact in team games.
 
-Correlated equilibria can be defined by the following equation:
+Formally, a correlated equilibrium is a probability distribution $p$ over the set of action vectors $S$ if the strategy vector $\tau^*$ is a Nash equilibrium of the game $\Gamma^*(p)$ [@zamir2013, 307]. In other words, for every player $i \in N$ :
 
-$$\max_{x_1,...x_n} \sum_{i=1}^{n} u_i(x_i) $$
+$$
+\sum_{s_{-i} \in S_{-i}} p\left(s_i, s_{-i}\right) u_i\left(s_i, s_{-i}\right) \geq \sum_{s_{-i} \in S_{-i}} p\left(s_i, s_{-i}\right) u_i\left(s_i^{\prime}, s_{-i}\right), \quad \forall s_i, s_i^{\prime} \in S_i
+$$
 
-$$\text{s.t.} \quad x_1 = c(y_1,...y_{n-1}) \quad \forall i>1: x_i=c(y_i)$$
+The equation states that the optimal strategy for each player is dependent on both their own decisions and on those of other players, which reflects how CE allow players to take into account each other’s behavior when making decisions.
 
-where $u_i$ represents the utility function for each player $i$, $x$ represents the strategy chosen by each player $i$, and $y$ represents the common randomizer chosen by all players. The equation states that the optimal strategy for each player is dependent on both their own decisions and on those of other players, which reflects how correlated equilibria allow people to take into account each other’s behavior when making decisions.
+The key feature and difference of CE is randomization. As @aumann1987 points out, correlation is more general than mixing of strategies, for the latter can be formally seen as the former by considering the product probability space $\Gamma^1 \times \cdots \times \Gamma^n$, where $\Gamma^i$ is the set of outcomes corresponding to player $i$'s mixed strategy. Players make correlated, or nonindependent, choices when they observe the same random variable. **For example,**
 
-If bourgeois strategy is an ESS, it does not presuppose any randomization. However, many scholars studying the emergence of conventions interpret them as CE. Some researchers base their explanations on interpretation of HDB. For example, @guala2016b defines social institutions as CE with normative force rooted in HDB. Gintis explicitly refers to HDB as not to strict NE, but as to CE [@gintis2009a].
+***
+
+However, if $B$ strategy is an ESS, it does not presuppose any randomization. However, many scholars studying the emergence of conventions interpret them as CE. Some researchers base their explanations on interpretation of HDB. For example, @guala2016b defines social institutions as CE with normative force rooted in HDB. Gintis explicitly refers to HDB as not to strict NE, but as to CE [@gintis2009a].
 
 The intrinsic problem with bourgeois as CE is the source of randomization. Some scholars appeal to Nature as to a such source, calling it a *correlation device*, thus eliminating the tension between the requirement of randomization and symmetry of ESS [@cripps1991; @skyrms2014; @metzger2018]. In particular, Gintis defines CE as an NE of a game $G$ augmented by the initial move by Nature that who observes a random variable $\gamma$ on a probability space $(\Gamma, p)$ and issues directives $f_{i}(\gamma) \in S$ to each player $i$, such that choosing the directive is a best response given agents having a common prior $p$ and assuming other players are also following Nature's directives [@gintis2009a, 135-136].
 
 In their theory, Guala and Hindriks appeal to Skyrms's interpretation of the "Hawk-dove" that is with correlation. According to Skyrms, the implicative nature of the "bourgeois" strategy in the form "if own, then Hawk" and "if do not own, then Dove" is genuinely correlative. “Bourgeois” is correlated equilibrium spontaneously arising from symmetry-breaking that happens when individuals randomize the choice of their strategies and do not know whether they are “hawkes” or “doves” [-@skyrms2014, 78].
+
+@maynardsmith1982 considers the 'social contract' game as one which humans can play but animals cannot. This game involves a group of individuals agreeing on a behavioral regularity and punishing any member who deviates from it. However, the act of punishing carries a cost, so in order to maintain stability, refusal to participate in enforcement must be considered a breach and punished as well. To ensure enforcement, a subgroup may be rewarded for carrying it out.
 
 ### 4.3 Interpretation of HDB: uncorrelated asymmetry
 Another interpretation of HDB involves uncorrelated asymmetry instead of correlation. @oconnor2019 employs this interpretation in her treatment of emergence of unfairness due to social categories as solutions to inherently institutional coordination problems. On this account, HDB strategy profiles are based not on correlation, but on uncorrelated asymmetry. It is a feature of games where players extract additional information from environment not included in the structure of a game. For example, they know that they are “Hawks” or “Doves” rather than their strategies are randomized. This underlies an important methodological distinction between correlated equilibrium and evolutionary stability.
@@ -337,3 +384,4 @@ Another interpretation of HDB involves uncorrelated asymmetry instead of correla
 [^2]: Correlated equilibrium is a general solution concept introduced by Aumann [-@aumann1974; -@aumann1987]. As opposed to the classic Nash equilibrium, where players choose their strategies independently, here players choose strategies based on a public signal the value of which they assess privately, thus coordinating their actions according to a given correlation device.
 [^3]: An ESS is a strategy which, if adopted by a population, is resilient to invasion by any alternative strategy. Mathematically, an ESS can be defined as a strategy profile $\boldsymbol{s} = (s_1, s_2, ... , s_n)$ such that $\forall \boldsymbol{s'} \neq \boldsymbol{s}$, we have $\pi(\boldsymbol{s}, \boldsymbol{s}) > \pi(\boldsymbol{s}, \boldsymbol{s'})$, where $\pi$ is the average payoff of the population playing the strategies $\boldsymbol{s}$ and $\boldsymbol{s'}$ [@maynardsmith1982].
 [^4]: Nash equilibrium is a solution concept describing a strategy profile consisting of each player's best response to the other player's strategies where no one gains bigger payoff by deviating unilaterally.
+[^5]: However, it is still not clear whether human players such as grazers have genuine fitness rather utility value function. As @sterelny2012 suggests, there has been an evolutionary shift from fitness to utility correlated with the demographic explosion in the Pleistocene and subsequent significant decline in individual-level heritability of cultural traits, for offspring did not more resemble their parents informationally and ideologically due to the abundance of cultural information sources.
