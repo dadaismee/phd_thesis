@@ -1,0 +1,21 @@
+name: pandoc
+
+on: push
+
+jobs: 
+  convert_via_pandoc:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: convert md to pdf 
+      uses: docker://pandoc/latex:2.9
+      with:
+        entrypoint: /bin/sh
+        run: |
+         cd markdown-files; 
+         for file in $(ls ./ |grep *.md); do 
+          pandoc $file -o ${file:0:-2}pdf; 
+          done   
+   - uses: stefanzweifel/git-auto-commit-action@v4
+   with:
+      commit_message: Changed files
