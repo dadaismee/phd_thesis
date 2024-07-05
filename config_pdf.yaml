@@ -19,7 +19,7 @@ metadata:
   bibliography: /Users/valerii/Zotero/zotero.bib
   csl: /Users/valerii/Zotero/styles/apa.csl
 
-metadata-file: manuscript/00_metadata.md
+metadata-file: manuscript/000_metadata.md
 
 # log 
 verbosity: WARNING # ERROR, WARNING, or INFO

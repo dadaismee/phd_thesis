@@ -1,20 +1,19 @@
 ---
 # METADATA
 lang: en-US # like en, en-UK, en-US, fr, it, it-IT, ...
-title: "Cognitive foundations of social coordination"
-# subtitle: "Deliberational mechanisms of equilibrium emergence"
+title: "Evolutionary bases of social institutions"
+subtitle: "Deliberational mechanisms of equilibrium emergence"
 subject: "PhD thesis in Philosophy of Science, HSE University, Moscow"
 author: "Valerii Shevchenko"
 header-includes:
-  - \usepackage{pgfplots}
 date: 2023
 keywords: "Technology, Philosophy, OpenSource"
 # thanks: "So Long, and Thanks for All the Fish"
 publisher: My Publisher
-rights: © 2023 Valerii Shevchenko, CC BY-NC
+rights: © 2024 Valerii Shevchenko, CC BY-NC
 identifier:
-- scheme: ISBN
-  text: 1234567890
+- scheme: 
+  text: 
 
 # Formatting
 toc-title: "Table of Contents"

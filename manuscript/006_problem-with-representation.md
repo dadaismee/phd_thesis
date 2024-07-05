@@ -1,0 +1,43 @@
+---
+title: Two senses of "representation" in rules-in-equilibria theory
+author: Valerii Shevchenko
+affiliation: HSE University
+abstract: 
+keywords:
+documentclass: article
+geometry: [a4paper, bindingoffset=0mm, inner=20mm, outer=20mm, top=20mm, bottom=20mm]
+---
+
+# Introduction
+In this paper, I argue that rules-in-equilibria theory of social institutions defended by Guala and Hindriks [-@hindriks2015; -@guala2015] uses the notion of representation ambiguously, thus rendering the entire argumentation of the theory problematic.
+
+# Guala's conditions for a theory of social institutions
+![[Guala's explanatory components for theory of institutions]]
+
+# Two senses of "representation"
+As might be seen from the exposition, the authors base their argument on the notion of insufficiency—of both rules and equilibria as distinct explanations of institutions. However, while justifying the insufficiency of equilibria with applicability of the concept of correlated equilibria to both humans and animals, the authors use the notion of representation in a broad sense, although appeal to Sterelny [-@sterelny2003], who uses it in a narrower sense of an advanced cognitive capacity. It means that coordination and correlation are insufficient, and representation is needed.
+However, the character of the term “representation” is ambiguous: a-rules "represent" game-theoretic strategies in a more philosophical sense and not in a cognitive one, while the authors mention terms like stimuli, behavior and representation, that clearly imply a narrower cognitive perspective. From a social-scientific point of view, representation as a relation makes sense, for it allows investigation of Y-terms, or institutional terms, used by agents by observing social practices, circumscribing social norms that govern them and then trying to figure out the respective strategies in equilibrium [@guala2016b, ch. 14]. However, representation as a cognitive capacity does not have any immediate practical application, especially in sociological data. Hence, there is need to discern two notions of representation in Guala's and Hindriks' argument:
+
+- representation as relation
+- representation as cognitive capacity.
+
+If, according to the authors, representation as a cognitive capacity distinguishes human conventions from animal ones, which is a crucial step in their argument from insufficiency of both rules and equilibria, it means that the representation as a relation between the rules and equilibrium might ontologically depend on representation as a cognitive capacity.
+
+As the authors base their argument on Sterelny's, the capacity for inventing and following new normative rules depends on response breadth and decoupled representation of environment accessible to humans. However, crucially, there is no explicit conceptual link between representation as a cognitive capacity that grounds rule invention and representation of strategies by a-rules. The former is a feature of agents, and the latter the feature of a theory describing the agents.
+
+When the authors introduce representation as a final condition for satisfactory theory of institutions along with coordination and correlation, they mainly mean "representation-as-relation", as they use it to clarify and justify the relationship between the two parts of the theory: rules and equilibria. Representation here means that agents are capable of representing equilibria and their salient features in symbolic form [@hindriks2015, 466]. According to the authors, this is possible due to an advanced cognitive capacity for decoupling a stimulus and behavior with the aid of representation of environment. This decoupling allows for conditioning the behavior, or strategies, on many coordination devices, and the authors take it for humans to be equivalent to "following different rules". Here rules are symbolic representations of the strategies "that ought to be followed in a given game" [@hindriks2015, 467].
+
+Here is a problem with this argument. It presupposes that behavior conditioning, and hence strategy selection, occurs already being based on existing rules. To follow a rule, it should exist. At the same time, these rules are a-rules, and they already represent existing strategies "that ought to be followed in a given game". It means that behavior is conditioned on the existing strategies, and this involves a vicious circle: inventing new rules requires not only a capacity for stimulus-behavior decoupling, but existing equilbria, for here salient features of existing equilibria are used as coordination devices. In other words, the authors equate representation of salient features of the environment with representation of existing strategies, or behavioral responses, that preexist in the current game structure and "ought to be followed". It means that agents directly represent game structure with the aid of a-rules and institutional terms. Decoupled representation is used as a bridge between a-rules and o-rules, but it would mean that stimuli are themselves o-rules of the form "do X if Y". There seems to be a missing link.
+
+Would this work without representation as a cognitive capacity? No, for stimulus-behavior decoupling is key for a capacity to invent and follow new rules which distinguishes human social institutions and animal conventions. The introduction of decoupled representation as a cognitive capacity is only due to justifying this difference: although the payoff structure in both HDB games is the same, human agents are able to devise and converge on new equilibria given the same coordination device, or signal. For example, if butterflies can coordinate only on the precedence of occupying the sun spot, for they use the temporal order of territory occupation as a coordination device, humans are not genetically hardwired for using one and only coordination device for a given situation. We can interpret the same coordination device differently. As a simple example, many countries have a nod as "yes" and head shake as "no". However, it is the opposite in Bulgaria. A set of signals is the same, but the equilibrium is different. And it crashes when a foreigner tries to understand a native. Overall, the argument will not succeed without representation as a cognitive capacity, for there will still be no difference between human social institutions and animal conventions in game-theoretic terms.
+
+And would the argument work without the notion of representation as a relation between rules and equilibria? No, as well, as it is the crux of the argument and of the unification done by rules-in-equilibria theory. Representation here logically connects rules and equilibria and helps to further connect it to constitutive rules theory by the notion of institutional, or Y-terms, as in "X count as Y in C" formula.
+
+A more interesting question is whether representation as relation is possible without representation as a capacity. No, for as there is no structural difference between animal conventions and human social institutions without a human capacity for stimulus-behavior decoupling, there is no added representation of strategies with a-rules by agents. Animals seemingly cannot represent strategies with formulated normative a-rules. And if there is no decoupling, hence there is no "new rules and strategies". Apart from this, according to the authors, representation is needed to condition the behavior on the features of existing equilibria "that ought to be followed" to introduce brand new strategies and equilibria. It means that behavior conditioning, either in Sterelny's sense of salient features of immediate environment or in Guala's and Hindriks' sense of a-rules as representations of salient features of existing equilibria, requires a capacity for a decoupled representation.
+
+Thus, for the whole argument about social institution as rules-in-equilibria to succeed, Guala and Hindriks should show two things:
+
+- that correlated equilibrium is indeed supported both in human and animal conventions in the first place. It is for @maynardsmith1982, from whom they take the notion of bourgeois equilibrium, uses ESS and not correlated equilibrium;
+- that representation as a relation between rules and equilibrium is ontologically dependent on representation as a cognitive capacity.
+
+For the theory to fully work, it is needed to clarify the mechanics of decoupled representation: how it contributes to the emergence of new strategies to the extent that agents acquire an advanced capacity to represent the game structure and salient features of equilibria, if they do it at all. However, this is out of the scope of this paper.
